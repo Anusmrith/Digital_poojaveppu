@@ -1,0 +1,2476 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Digital Pooja Veppu | Cyber Sannidhanam 🙏</title>
+  <meta name="description" content="Surrender your PDFs, YouTube playlists, and open Chrome tabs to Goddess Saraswati for a guilt-free Pooja holiday break from Sunday evening (Oct 18) to Wednesday morning (Oct 21)." />
+
+  <!-- Google Fonts: Cinzel & Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Noto+Serif+Malayalam:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            temple: {
+              dark: '#12050b',
+              midnight: '#190812',
+              maroon: '#3b0918',
+              crimson: '#660b24',
+              gold: '#fbbf24',
+              goldglow: '#fde047',
+              brass: '#d97706',
+              bronze: '#b45309',
+              saffron: '#ff7700',
+              kumkum: '#dc2626',
+              chandan: '#fef08a'
+            }
+          },
+          fontFamily: {
+            cinzel: ['"Cinzel"', 'serif'],
+            poppins: ['"Poppins"', 'sans-serif'],
+            malayalam: ['"Noto Serif Malayalam"', 'serif']
+          },
+          animation: {
+            'aura-pulse': 'auraPulse 4s ease-in-out infinite',
+            'spin-slow': 'spin 40s linear infinite',
+            'reverse-spin-slow': 'reverseSpin 45s linear infinite',
+            'flame-flicker': 'flameFlicker 0.15s ease-in-out infinite alternate',
+            'flame-flicker-2': 'flameFlicker2 0.2s ease-in-out infinite alternate',
+            'bell-ring': 'bellRing 1.1s cubic-bezier(0.36, 0.07, 0.19, 0.97)',
+            'float-slow': 'floatSlow 4s ease-in-out infinite',
+            'shake': 'shakeScreen 0.5s cubic-bezier(.36,.07,.19,.97) both',
+            'sparkle-fade': 'sparkleFade 1.2s ease-out forwards'
+          },
+          keyframes: {
+            auraPulse: {
+              '0%, 100%': { transform: 'scale(1)', opacity: '0.75' },
+              '50%': { transform: 'scale(1.12)', opacity: '1' }
+            },
+            reverseSpin: {
+              'from': { transform: 'rotate(360deg)' },
+              'to': { transform: 'rotate(0deg)' }
+            },
+            flameFlicker: {
+              '0%': { transform: 'scale(1) skewX(-1.5deg)', filter: 'drop-shadow(0 0 10px #ff7700) drop-shadow(0 0 24px #ffd700)' },
+              '100%': { transform: 'scale(1.12, 1.05) skewX(2deg)', filter: 'drop-shadow(0 0 16px #ff4400) drop-shadow(0 0 32px #ffd700)' }
+            },
+            flameFlicker2: {
+              '0%': { transform: 'scale(0.95) skewY(1deg)' },
+              '100%': { transform: 'scale(1.1, 1.05) skewY(-1.5deg)' }
+            },
+            bellRing: {
+              '0%': { transform: 'rotate(0deg)' },
+              '20%': { transform: 'rotate(18deg)' },
+              '40%': { transform: 'rotate(-16deg)' },
+              '60%': { transform: 'rotate(10deg)' },
+              '80%': { transform: 'rotate(-6deg)' },
+              '100%': { transform: 'rotate(0deg)' }
+            },
+            floatSlow: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-6px)' }
+            },
+            shakeScreen: {
+              '10%, 90%': { transform: 'translate3d(-2px, 0, 0)' },
+              '20%, 80%': { transform: 'translate3d(4px, 0, 0)' },
+              '30%, 50%, 70%': { transform: 'translate3d(-6px, 0, 0)' },
+              '40%, 60%': { transform: 'translate3d(6px, 0, 0)' }
+            },
+            sparkleFade: {
+              '0%': { opacity: '0', transform: 'scale(0.5) translateY(0)' },
+              '50%': { opacity: '1', transform: 'scale(1.2) translateY(-12px)' },
+              '100%': { opacity: '0', transform: 'scale(1.5) translateY(-24px)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Canvas Confetti CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <style>
+    /* Clean Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #12050b;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #831843;
+      border-radius: 4px;
+      border: 1px solid #d97706;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #d97706;
+    }
+
+    /* Kasavu Gold Border */
+    .kasavu-border {
+      border: 3px solid #fbbf24;
+      box-shadow: 0 0 16px rgba(251, 191, 36, 0.3);
+    }
+    .kasavu-gold-gradient {
+      background: linear-gradient(135deg, #ffd700 0%, #ffae19 35%, #d97706 70%, #ffea79 100%);
+    }
+
+    /* Chandan-Kumkum Tilak mark */
+    .chandan-mark {
+      background: linear-gradient(to bottom, #fef08a 0%, #fef08a 40%, #dc2626 40%, #dc2626 65%, #fef08a 65%, #fef08a 100%);
+    }
+
+    #smokeCanvas, #petalsCanvas {
+      pointer-events: none;
+    }
+
+    #riceCanvas {
+      cursor: crosshair;
+      touch-action: none;
+    }
+
+    .screen-shaking {
+      animation: shakeScreen 0.5s cubic-bezier(.36,.07,.19,.97) both;
+    }
+
+    .warning-flash {
+      box-shadow: inset 0 0 120px rgba(220, 38, 38, 0.8);
+    }
+
+    /* Draggable Agarbatti */
+    #draggableAgarbatti {
+      touch-action: none;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    #draggableAgarbatti:active {
+      cursor: grabbing;
+    }
+
+    /* Mobile Touch & iOS Safari Optimizations */
+    * {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      -webkit-overflow-scrolling: touch;
+    }
+
+    /* Prevent iOS Safari unwanted auto-zoom when tapping text inputs */
+    input[type="text"], input[type="file"], textarea {
+      font-size: 16px !important;
+    }
+    @media (min-width: 640px) {
+      input[type="text"], input[type="file"], textarea {
+        font-size: 14px !important;
+      }
+    }
+
+    /* Bottom spacing on mobile for sticky action dock with safe-area support */
+    @media (max-width: 767px) {
+      body {
+        padding-bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px));
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-[#12050b] text-amber-50 font-poppins selection:bg-amber-500 selection:text-black min-h-screen relative overflow-x-hidden">
+
+  <!-- Pushpanjali Petals Shower Canvas -->
+  <canvas id="petalsCanvas" class="fixed inset-0 w-full h-full z-40 pointer-events-none"></canvas>
+
+  <!-- Blank Form Floating Notification Toast -->
+  <div id="blankNoticeToast" class="fixed top-20 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-0 transition-opacity duration-300 bg-rose-950/95 backdrop-blur-md border-2 border-rose-500 text-rose-100 text-xs sm:text-sm font-semibold px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-3 hidden">
+    <span class="text-xl flex-shrink-0">⚠️</span>
+    <div>
+      <p class="font-bold text-amber-300">Student Name / Material is Blank!</p>
+      <p class="text-[11px] text-rose-200">Please enter your name and upload a PDF or enter a link to surrender your books first.</p>
+    </div>
+  </div>
+
+  <!-- Auspicious Festive Garland Header -->
+  <div class="fixed top-0 left-0 right-0 z-30 pointer-events-none flex justify-around opacity-80 select-none overflow-hidden h-7 bg-black/25">
+    <div class="flex w-full justify-between items-center px-4 text-amber-400 text-xs tracking-widest font-serif">
+      <span>🍃 🏵️ 🍃 🌼 🍃 🏵️ 🍃</span>
+      <span class="hidden md:inline">🍃 🏵️ 🍃 🌼 🍃 🏵️ 🍃</span>
+      <span class="hidden lg:inline">🍃 🏵️ 🍃 🌼 🍃 🏵️ 🍃</span>
+      <span>🍃 🏵️ 🍃 🌼 🍃 🏵️ 🍃</span>
+    </div>
+  </div>
+
+  <!-- Top Navigation & Holiday Status Bar -->
+  <header class="relative z-30 pt-8 pb-4 px-4 bg-gradient-to-b from-[#250714] via-[#1a050e] to-transparent border-b border-amber-500/20">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      
+      <!-- Brand & Tagline -->
+      <div class="flex items-center gap-3 text-center md:text-left">
+        <div class="w-12 h-12 rounded-2xl kasavu-gold-gradient p-[2px] shadow-lg shadow-amber-500/30 flex-shrink-0 animate-float-slow">
+          <div class="w-full h-full rounded-2xl bg-[#1e0712] flex items-center justify-center text-2xl">
+            🛕
+          </div>
+        </div>
+        <div>
+          <div class="flex items-center gap-2 justify-center md:justify-start">
+            <h1 class="text-xl sm:text-2xl font-cinzel font-bold text-amber-200 tracking-wide">
+              Digital Pooja Veppu
+            </h1>
+            <span class="bg-amber-500/20 text-amber-300 text-[11px] font-semibold px-2.5 py-0.5 rounded-full border border-amber-500/30">
+              Cyber Sannidhanam
+            </span>
+          </div>
+          <p class="text-xs text-amber-300/80 mt-0.5">
+            Pooja Holidays: <strong>Sunday Evening (Oct 18)</strong> to <strong>Wednesday Morning (Oct 21)</strong>
+          </p>
+        </div>
+      </div>
+
+      <!-- Quick Action Controls & Countdown -->
+      <div class="flex flex-wrap items-center justify-center gap-3">
+        
+        <!-- Live Countdown -->
+        <div class="flex items-center gap-2 bg-[#2a0b18] border border-amber-500/40 rounded-xl px-3.5 py-1.5 shadow-inner">
+          <div class="flex items-center gap-1.5 text-amber-400 text-xs font-medium">
+            <i data-lucide="clock" class="w-3.5 h-3.5 text-amber-400"></i>
+            <span>Pooja Eduppu:</span>
+          </div>
+          <div id="countdownTimer" class="font-mono text-xs font-bold text-amber-200 tracking-wider flex items-center gap-1">
+            <span id="cdDays" class="bg-amber-950 px-1.5 py-0.5 rounded border border-amber-600/30 text-amber-300">02d</span> :
+            <span id="cdHours" class="bg-amber-950 px-1.5 py-0.5 rounded border border-amber-600/30 text-amber-300">16h</span> :
+            <span id="cdMins" class="bg-amber-950 px-1.5 py-0.5 rounded border border-amber-600/30 text-amber-300">00m</span> :
+            <span id="cdSecs" class="bg-amber-950 px-1.5 py-0.5 rounded border border-amber-600/30 text-amber-400">00s</span>
+          </div>
+        </div>
+
+        <!-- Ambient Sound Toggle -->
+        <button id="toggleAudioBtn" onclick="toggleDivineDrone()" title="Listen to calm temple ambient drone" class="flex items-center gap-1.5 bg-amber-950/70 hover:bg-amber-900/80 text-amber-300 text-xs px-3 py-2 rounded-xl border border-amber-500/30 transition-all">
+          <i id="audioIcon" data-lucide="volume-x" class="w-3.5 h-3.5 text-amber-400"></i>
+          <span id="audioLabel">Ambient Sound</span>
+        </button>
+
+        <!-- Rice Tray Quick Button -->
+        <button onclick="openVidyarambhamModal()" class="flex items-center gap-1.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-amber-950 font-bold text-xs px-3.5 py-2 rounded-xl shadow-md transition-transform hover:scale-105 active:scale-95">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+          <span>Rice Tray 🌾</span>
+        </button>
+
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Clean Welcome Banner -->
+  <div class="max-w-5xl mx-auto px-4 mt-4">
+    <div class="bg-amber-950/40 border border-amber-500/25 rounded-2xl p-3.5 text-xs sm:text-sm text-amber-200/90 leading-relaxed flex items-center justify-between gap-3">
+      <div class="flex items-center gap-3">
+        <span class="text-xl">🌸</span>
+        <p>
+          Surrender your PDFs, YouTube playlists, or open tabs before Saraswati Devi. Take a <strong>100% guilt-free break</strong> until Wednesday morning (Oct 21)!
+        </p>
+      </div>
+      <span class="hidden sm:inline text-xs text-amber-400 font-medium bg-amber-950/60 px-2.5 py-1 rounded-lg border border-amber-500/30 whitespace-nowrap">
+        Oct 18 – Oct 21
+      </span>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="max-w-6xl mx-auto px-4 py-8 space-y-10 relative z-20">
+
+    <!-- 🛕 SECTION 1: THE DIVINE ALTAR (WITH MOVABLE AGARBATTI / AARTI) -->
+    <section id="altarSection" class="relative rounded-3xl bg-gradient-to-b from-[#230714] via-[#1a050e] to-[#12040a] border-2 border-amber-500/30 p-4 sm:p-8 shadow-2xl overflow-hidden min-h-[500px]">
+      
+      <!-- Full-Altar Smoke Simulation Canvas (Smoke follows agarbatti everywhere) -->
+      <canvas id="smokeCanvas" class="absolute inset-0 w-full h-full pointer-events-none z-10"></canvas>
+
+      <!-- Ambient Glow Behind Altar -->
+      <div class="absolute -top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gradient-to-b from-amber-500/15 via-rose-900/10 to-transparent rounded-full blur-3xl pointer-events-none"></div>
+
+      <!-- Altar Header -->
+      <div class="text-center relative z-20 mb-2">
+        <div class="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-amber-900/50 border border-amber-500/30 text-amber-300 text-xs font-semibold tracking-wide">
+          <span>✨</span>
+          <span>Sri Saraswati Cyber Sannidhanam</span>
+          <span>✨</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-cinzel font-bold text-amber-100 mt-1">
+          Goddess Saraswati's Sacred Altar
+        </h2>
+        <p class="text-xs text-amber-300/80 max-w-lg mx-auto font-light mt-0.5">
+          Ring the bell, light lamps, shower petals, or <strong>drag the Agarbatti</strong> around Devi for Aarti!
+        </p>
+      </div>
+
+      <!-- Aarti Notification Toast -->
+      <div id="aartiToast" class="absolute top-16 left-1/2 -translate-x-1/2 z-30 pointer-events-none opacity-0 transition-opacity duration-300 bg-amber-500/20 backdrop-blur-md border border-amber-400 text-amber-200 text-xs font-bold px-4 py-1.5 rounded-full shadow-lg shadow-amber-500/20 flex items-center gap-2">
+        <span>✨</span>
+        <span>Aarti Offered to Saraswati Devi! (+100 Divine Grace)</span>
+        <span>✨</span>
+      </div>
+
+      <!-- Sanctum Layout: Responsive 3-Column Sanctum with Mobile Balanced Dais -->
+      <div class="relative z-20 flex flex-wrap lg:flex-nowrap items-center justify-between gap-y-4 gap-x-1 sm:gap-x-2 lg:gap-6 my-2 min-h-[380px] sm:min-h-[440px]">
+        
+        <!-- Left Wing: Hanging Bell & Left Nilavilakku (Mobile: Left 50% Dais) -->
+        <div class="w-1/2 lg:w-1/4 order-2 lg:order-1 flex flex-row lg:flex-col items-center justify-around lg:justify-center gap-2 sm:gap-6 py-1 sm:py-2">
+          
+          <!-- Hanging Temple Bell (Ghanta) - Bell sound plays ONLY when clicked -->
+          <div class="flex flex-col items-center group cursor-pointer active:scale-95 transition-transform" onclick="ringTempleBell()" title="Click to ring the sacred temple bell!">
+            <div class="w-1 sm:w-1.5 h-10 sm:h-14 bg-gradient-to-b from-amber-800 via-amber-600 to-amber-500 rounded-full shadow"></div>
+            <div id="templeBell" class="relative -mt-1 origin-top transition-transform group-hover:scale-105 active:scale-95">
+              <svg width="60" height="72" viewBox="0 0 100 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-12 sm:w-[70px] h-auto drop-shadow-[0_8px_16px_rgba(251,191,36,0.45)]">
+                <circle cx="50" cy="14" r="9" stroke="#b45309" stroke-width="4" fill="none" />
+                <path d="M46 22 H54 V34 H46 Z" fill="#d97706" />
+                <path d="M50 32 C34 34 26 50 24 74 C22 92 12 98 12 102 C12 105 16 108 50 108 C84 108 88 105 88 102 C88 98 78 92 76 74 C74 50 66 34 50 32 Z" fill="url(#brassBellGrad)" stroke="#78350f" stroke-width="2" />
+                <path d="M12 102 C25 106 75 106 88 102" stroke="#fef08a" stroke-width="2.5" />
+                <circle cx="50" cy="62" r="6" fill="#fef08a" opacity="0.7" />
+                <circle cx="50" cy="113" r="8" fill="#92400e" stroke="#fbbf24" stroke-width="2" />
+                
+                <defs>
+                  <linearGradient id="brassBellGrad" x1="12" y1="32" x2="88" y2="108" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#fef08a" />
+                    <stop offset="25%" stop-color="#fbbf24" />
+                    <stop offset="60%" stop-color="#d97706" />
+                    <stop offset="90%" stop-color="#78350f" />
+                    <stop offset="100%" stop-color="#b45309" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <span class="mt-1.5 text-[10px] sm:text-xs font-semibold text-amber-300 group-hover:text-amber-100 flex items-center gap-1 sm:gap-1.5 bg-amber-950/70 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full border border-amber-500/30">
+              <i data-lucide="bell" class="w-3 h-3 sm:w-3.5 sm:h-3.5 text-amber-400"></i> Bell (<span id="bellCount">0</span>)
+            </span>
+          </div>
+
+          <!-- Left Nilavilakku (Kerala Brass Lamp) -->
+          <div class="flex flex-col items-center cursor-pointer group active:scale-95 transition-transform" onclick="toggleNilavilakku('left')" title="Click to light or dim the lamp">
+            <div class="relative flex flex-col items-center">
+              <div id="flameLeft" class="flame-container relative z-10 flex flex-col items-center -mb-2 transition-all duration-300">
+                <div class="w-3.5 sm:w-4 h-7 sm:h-9 bg-gradient-to-t from-orange-600 via-amber-400 to-yellow-100 rounded-[50%_50%_35%_35%/70%_70%_30%_30%] animate-flame-flicker shadow-[0_0_20px_#ff7700,0_0_40px_#ffd700]"></div>
+                <div class="w-1.5 h-2.5 sm:h-3 bg-blue-400/90 rounded-full -mt-2 blur-[0.5px]"></div>
+              </div>
+
+              <svg width="46" height="115" viewBox="0 0 80 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-10 sm:w-14 h-auto drop-shadow-lg">
+                <path d="M40 18 L43 28 L37 28 Z" fill="#fbbf24" />
+                <circle cx="40" cy="32" r="5" fill="#f59e0b" stroke="#78350f" />
+                <path d="M15 48 C15 42 65 42 65 48 C65 54 50 62 40 62 C30 62 15 54 15 48 Z" fill="url(#lampBrassGrad)" stroke="#78350f" stroke-width="1.5" />
+                <ellipse cx="40" cy="46" rx="22" ry="4" fill="#92400e" />
+                <path d="M37 62 H43 V95 H37 Z" fill="#d97706" />
+                <circle cx="40" cy="78" r="6" fill="#fbbf24" stroke="#78350f" />
+                <path d="M22 98 C22 95 58 95 58 98 C58 103 50 108 40 108 C30 108 22 103 22 98 Z" fill="url(#lampBrassGrad)" stroke="#78350f" />
+                <path d="M36 108 H44 V160 H36 Z" fill="#d97706" />
+                <path d="M10 185 C10 170 30 162 40 162 C50 162 70 170 70 185 C70 192 10 192 10 185 Z" fill="url(#lampBrassGrad)" stroke="#78350f" stroke-width="2" />
+                <rect x="8" y="185" width="64" height="6" rx="2" fill="#78350f" />
+
+                <defs>
+                  <linearGradient id="lampBrassGrad" x1="10" y1="40" x2="70" y2="190" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#fef08a" />
+                    <stop offset="30%" stop-color="#fbbf24" />
+                    <stop offset="70%" stop-color="#b45309" />
+                    <stop offset="100%" stop-color="#78350f" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <span class="text-[10px] sm:text-xs font-semibold text-amber-300 mt-1 bg-amber-950/60 px-2 sm:px-2.5 py-0.5 rounded-full border border-amber-500/20">
+              🪔 Lamp
+            </span>
+          </div>
+
+        </div>
+
+        <!-- Center Stage: Goddess Saraswati with Halos (Mobile: Full Width Elevated Top) -->
+        <div id="deviCenterContainer" class="relative w-full lg:w-2/4 order-1 lg:order-2 flex flex-col items-center justify-center py-1 sm:py-2">
+          
+          <!-- Outer Pulsing Divine Aura -->
+          <div id="deviAuraGlow" class="absolute w-[220px] sm:w-[400px] h-[220px] sm:h-[400px] rounded-full bg-gradient-to-r from-amber-500/25 via-yellow-300/35 to-amber-600/25 blur-3xl animate-aura-pulse pointer-events-none transition-all duration-300"></div>
+
+          <!-- Rotating Golden Sacred Geometry Rings -->
+          <div class="absolute w-[210px] sm:w-[360px] h-[210px] sm:h-[360px] rounded-full border border-dashed border-amber-400/35 animate-spin-slow pointer-events-none"></div>
+          <div class="absolute w-[180px] sm:w-[300px] h-[180px] sm:h-[300px] rounded-full border border-dotted border-yellow-300/30 animate-reverse-spin-slow pointer-events-none"></div>
+
+          <!-- Center Image: Goddess Saraswati -->
+          <div class="relative z-10 w-full max-w-[210px] sm:max-w-[340px] flex items-center justify-center select-none py-1 sm:py-2 animate-float-slow">
+            <img 
+              id="saraswatiImage"
+              src="saraswati.png" 
+              alt="Goddess Saraswati on Lotus" 
+              class="w-full h-auto max-h-[290px] sm:max-h-[440px] object-contain drop-shadow-[0_12px_36px_rgba(251,191,36,0.5)] transition-transform duration-500 hover:scale-105"
+            />
+          </div>
+
+          <!-- Offer Flower Petals Button -->
+          <div class="mt-1 sm:mt-2 flex flex-wrap items-center justify-center gap-2 sm:gap-3 relative z-20">
+            <button onclick="offerPushpanjali()" class="group relative px-4 sm:px-6 py-2 sm:py-2.5 rounded-2xl font-cinzel font-bold text-xs sm:text-sm text-amber-950 bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 hover:from-amber-200 hover:via-yellow-300 hover:to-amber-400 shadow-lg shadow-amber-500/30 hover:shadow-amber-400/50 transition-all transform hover:-translate-y-0.5 active:scale-95 flex items-center gap-2">
+              <span class="text-sm sm:text-base group-hover:rotate-12 transition-transform">🌸</span>
+              <span>Offer Petals (Pushpanjali)</span>
+              <span id="pushpanjaliCount" class="bg-amber-900/40 text-amber-950 px-2 py-0.5 rounded-full text-xs font-mono font-bold">0</span>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Right Wing: Right Nilavilakku & Draggable Agarbatti (Mobile: Right 50% Dais) -->
+        <div class="w-1/2 lg:w-1/4 order-3 lg:order-3 flex flex-row-reverse lg:flex-col items-center justify-around lg:justify-center gap-2 sm:gap-6 py-1 sm:py-2">
+          
+          <!-- DRAGGABLE AGARBATTI INCENSE (Move around for Aarti!) -->
+          <div id="agarbattiWrapper" class="relative">
+            <div id="draggableAgarbatti" class="flex flex-col items-center cursor-grab active:cursor-grabbing group select-none relative z-30 transition-shadow active:scale-95 touch-none" title="Drag to perform Aarti around Devi! Click to toggle smoke">
+              
+              <!-- Aarti Drag Hint Badge -->
+              <span class="mb-1 text-[9px] sm:text-[10px] font-bold text-amber-300/90 bg-amber-950/80 px-1.5 sm:px-2 py-0.5 rounded-full border border-amber-500/30 flex items-center gap-1 shadow-sm whitespace-nowrap">
+                <span>🖐️</span> <span>Aarti</span>
+              </span>
+
+              <div id="agarbattiStickContainer" class="relative w-18 sm:w-24 h-26 sm:h-32 flex flex-col items-center justify-end transition-transform duration-75">
+                
+                <!-- Incense Sticks & Burning Embers -->
+                <div class="relative w-14 sm:w-16 h-20 sm:h-24 flex items-end justify-center pointer-events-none">
+                  <div class="absolute bottom-2 left-5 sm:left-6 w-1 h-16 sm:h-20 bg-stone-700 origin-bottom -rotate-12 rounded-full">
+                    <div id="ember1" class="w-2.5 h-2.5 rounded-full bg-orange-500 -mt-1 -ml-0.5 shadow-[0_0_10px_#ff5500] animate-ping duration-1000"></div>
+                  </div>
+                  <div class="absolute bottom-2 right-5 sm:right-6 w-1 h-16 sm:h-20 bg-stone-700 origin-bottom rotate-12 rounded-full">
+                    <div id="ember2" class="w-2.5 h-2.5 rounded-full bg-orange-500 -mt-1 -ml-0.5 shadow-[0_0_10px_#ff5500] animate-pulse"></div>
+                  </div>
+                </div>
+
+                <!-- Brass Incense Stand -->
+                <div class="relative -mt-2 pointer-events-none">
+                  <svg width="50" height="22" viewBox="0 0 80 34" fill="none" xmlns="http://www.w3.org/2000/svg" class="sm:w-[60px] sm:h-[26px]">
+                    <path d="M10 20 C10 14 70 14 70 20 C70 26 55 32 40 32 C25 32 10 26 10 20 Z" fill="url(#lampBrassGrad)" stroke="#78350f" stroke-width="1.5" />
+                    <ellipse cx="40" cy="18" rx="26" ry="6" fill="#78350f" />
+                    <circle cx="36" cy="18" r="2" fill="#292524" />
+                    <circle cx="44" cy="18" r="2" fill="#292524" />
+                  </svg>
+                </div>
+
+              </div>
+
+              <!-- Status Tag -->
+              <div class="flex items-center gap-1 sm:gap-1.5 mt-1">
+                <span class="text-[10px] sm:text-xs font-semibold text-amber-300 bg-amber-950/70 px-1.5 sm:px-2 py-0.5 rounded-full border border-amber-500/20">
+                  💨 <span id="agarbattiStatus" class="text-amber-200">Smoking</span>
+                </span>
+                <button type="button" onclick="resetAgarbattiPosition(event)" title="Reset Agarbatti back to stand" class="text-[10px] sm:text-[11px] text-amber-400 hover:text-amber-200 bg-amber-950/80 px-1.5 sm:px-2 py-0.5 rounded-full border border-amber-500/20 active:scale-95">
+                  Reset
+                </button>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Right Nilavilakku (Kerala Brass Lamp) -->
+          <div class="flex flex-col items-center cursor-pointer group active:scale-95 transition-transform" onclick="toggleNilavilakku('right')" title="Click to light or dim the lamp">
+            <div class="relative flex flex-col items-center">
+              <div id="flameRight" class="flame-container relative z-10 flex flex-col items-center -mb-2 transition-all duration-300">
+                <div class="w-3.5 sm:w-4 h-7 sm:h-9 bg-gradient-to-t from-orange-600 via-amber-400 to-yellow-100 rounded-[50%_50%_35%_35%/70%_70%_30%_30%] animate-flame-flicker-2 shadow-[0_0_20px_#ff7700,0_0_40px_#ffd700]"></div>
+                <div class="w-1.5 h-2.5 sm:h-3 bg-blue-400/90 rounded-full -mt-2 blur-[0.5px]"></div>
+              </div>
+
+              <svg width="46" height="115" viewBox="0 0 80 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-10 sm:w-14 h-auto drop-shadow-lg">
+                <path d="M40 18 L43 28 L37 28 Z" fill="#fbbf24" />
+                <circle cx="40" cy="32" r="5" fill="#f59e0b" stroke="#78350f" />
+                <path d="M15 48 C15 42 65 42 65 48 C65 54 50 62 40 62 C30 62 15 54 15 48 Z" fill="url(#lampBrassGrad)" stroke="#78350f" stroke-width="1.5" />
+                <ellipse cx="40" cy="46" rx="22" ry="4" fill="#92400e" />
+                <path d="M37 62 H43 V95 H37 Z" fill="#d97706" />
+                <circle cx="40" cy="78" r="6" fill="#fbbf24" stroke="#78350f" />
+                <path d="M22 98 C22 95 58 95 58 98 C58 103 50 108 40 108 C30 108 22 103 22 98 Z" fill="url(#lampBrassGrad)" stroke="#78350f" />
+                <path d="M36 108 H44 V160 H36 Z" fill="#d97706" />
+                <path d="M10 185 C10 170 30 162 40 162 C50 162 70 170 70 185 C70 192 10 192 10 185 Z" fill="url(#lampBrassGrad)" stroke="#78350f" stroke-width="2" />
+                <rect x="8" y="185" width="64" height="6" rx="2" fill="#78350f" />
+              </svg>
+            </div>
+            <span class="text-[10px] sm:text-xs font-semibold text-amber-300 mt-1 bg-amber-950/60 px-2 sm:px-2.5 py-0.5 rounded-full border border-amber-500/20">
+              🪔 Lamp
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Altar Footer Status -->
+      <div class="relative z-20 pt-4 border-t border-amber-500/20 flex flex-wrap items-center justify-between text-xs text-amber-200/80 gap-3">
+        <div class="flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span>Pooja Veppu Protection: <strong class="text-amber-300 font-medium">Active until Wednesday (Oct 21) Morning</strong></span>
+        </div>
+        <div class="flex items-center gap-4">
+          <span>Surrendered Materials: <strong id="totalItemsStat" class="text-amber-400 font-bold">0</strong></span>
+          <span>Validity: <strong class="text-amber-300 font-bold">Oct 18 – Oct 21</strong></span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 📥 SECTION 2: CLEAN, SIMPLE & FASCINATING SURRENDER FORM -->
+    <section id="surrenderFormSection" class="relative rounded-3xl bg-gradient-to-br from-[#270716] via-[#1b050f] to-[#12050b] border border-amber-500/30 p-6 sm:p-8 shadow-xl">
+      
+      <!-- Clean Header -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 border-b border-amber-500/20">
+        <div>
+          <div class="flex items-center gap-2 text-amber-400 text-xs font-bold uppercase tracking-wider">
+            <i data-lucide="scroll" class="w-4 h-4"></i>
+            <span>Pooja Veppu Surrender</span>
+          </div>
+          <h3 class="text-xl sm:text-2xl font-cinzel font-bold text-amber-100 mt-1">
+            Deposit Your Study Materials
+          </h3>
+          <p class="text-xs text-amber-300/80 font-light mt-0.5">
+            Surrender your PDF files, playlists, or tabs. You are spiritually exempt from studying until Wednesday!
+          </p>
+        </div>
+
+        <button onclick="openCertificateModal()" class="self-start sm:self-center flex items-center gap-2 px-4 py-2 rounded-xl bg-amber-950/80 hover:bg-amber-900 border border-amber-500/40 text-amber-300 text-xs font-semibold shadow transition-all hover:scale-105 active:scale-95">
+          <i data-lucide="award" class="w-4 h-4 text-amber-400"></i>
+          <span>Wednesday Certificate</span>
+        </button>
+      </div>
+
+      <!-- Streamlined Surrender Form (CLEAN - NO EXAM - NIGHT LEGEND REMOVED) -->
+      <form id="surrenderForm" onsubmit="handleSurrenderSubmit(event)" class="mt-6 space-y-5">
+        
+        <!-- Field 1: Devotee Name (Clean & simple, no Night Legend) -->
+        <div class="space-y-1.5">
+          <label for="devoteeName" class="block text-xs font-semibold text-amber-300 uppercase tracking-wider">
+            Your Name / Devotee <span class="text-rose-400">*</span>
+          </label>
+          <div class="flex flex-col sm:flex-row items-center gap-3">
+            <div class="relative w-full">
+              <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-amber-400/60">
+                <i data-lucide="user" class="w-4 h-4"></i>
+              </span>
+              <input type="text" id="devoteeName" maxlength="60" required placeholder="Enter your name (e.g. Arjun, Sneha)" class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-[#17050d] border border-amber-500/30 text-amber-100 placeholder-amber-400/30 focus:border-amber-400 focus:ring-1 focus:ring-amber-400 outline-none text-sm transition-all" />
+            </div>
+            
+            <!-- Quick Preset Pill (Night Legend removed as requested) -->
+            <div class="flex items-center gap-1.5 text-xs text-amber-300/80 whitespace-nowrap self-start sm:self-center">
+              <button type="button" onclick="fillDevotee('Exhausted Student')" class="bg-amber-950/50 hover:bg-amber-900/60 px-3 py-1.5 rounded-lg border border-amber-600/30 text-xs font-medium">Student</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Field 2: Study Material (PDF Upload OR Link / Title) -->
+        <div class="space-y-3 pt-1">
+          <label class="block text-xs font-semibold text-amber-300 uppercase tracking-wider">
+            Study Material to Surrender <span class="text-rose-400">*</span>
+          </label>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            
+            <!-- Option A: PDF File Upload Dropzone -->
+            <div id="pdfDropzone" onclick="document.getElementById('pdfFileInput').click()" class="border-2 border-dashed border-amber-500/40 hover:border-amber-400 rounded-2xl p-4 bg-[#16060e] hover:bg-[#1d0812] transition-colors cursor-pointer text-center group flex flex-col items-center justify-center min-h-[110px]">
+              <input type="file" id="pdfFileInput" accept=".pdf,.doc,.docx,.png,.jpg" onchange="handlePDFSelected(event)" class="hidden" />
+              
+              <div id="pdfUploadPrompt" class="flex flex-col items-center justify-center gap-1">
+                <span class="text-2xl group-hover:scale-110 transition-transform">📄</span>
+                <p class="text-xs sm:text-sm font-semibold text-amber-200">
+                  Upload PDF File (Notes / Syllabus)
+                </p>
+                <p class="text-[11px] text-amber-400/60">
+                  Click to browse or drop file here
+                </p>
+              </div>
+
+              <!-- Selected File Badge -->
+              <div id="pdfSelectedBadge" class="hidden w-full flex items-center justify-between bg-amber-950/80 border border-amber-500/40 rounded-xl px-3 py-2 text-left">
+                <div class="flex items-center gap-2 overflow-hidden">
+                  <span class="text-lg">📄</span>
+                  <div class="overflow-hidden">
+                    <p id="pdfSelectedName" class="text-xs font-bold text-amber-200 truncate">notes.pdf</p>
+                    <p id="pdfSelectedSize" class="text-[10px] text-amber-400/80">Ready to Surrender</p>
+                  </div>
+                </div>
+                <button type="button" onclick="clearPDFSelection(event)" class="text-xs text-rose-400 hover:text-rose-300 px-2 py-1 rounded hover:bg-rose-950/40">
+                  ✕
+                </button>
+              </div>
+            </div>
+
+            <!-- Option B: Text / Link Input -->
+            <div class="flex flex-col justify-center space-y-2 bg-[#16060e] border border-amber-500/30 rounded-2xl p-4">
+              <label for="resourceTitle" class="text-xs font-medium text-amber-300/90 flex items-center gap-1.5">
+                <i data-lucide="link-2" class="w-3.5 h-3.5 text-amber-400"></i>
+                <span>Or Enter Resource Title / Link:</span>
+              </label>
+              <input type="text" id="resourceTitle" maxlength="120" placeholder="e.g. 47 Open Chrome Tabs, YouTube Playlist, Notion Notes" class="w-full px-3.5 py-2.5 rounded-xl bg-[#10040a] border border-amber-500/30 text-amber-100 placeholder-amber-400/30 focus:border-amber-400 outline-none text-xs sm:text-sm transition-all" />
+              <div class="flex flex-wrap gap-1.5 text-[10px] text-amber-400/70 pt-0.5">
+                <button type="button" onclick="fillTitle('54 Open Chrome Tabs on Syllabus')" class="hover:underline bg-amber-950/40 px-2 py-0.5 rounded border border-amber-600/20">54 Chrome Tabs</button>
+                <button type="button" onclick="fillTitle('YouTube Playlist: Full Syllabus in 1 Shot')" class="hover:underline bg-amber-950/40 px-2 py-0.5 rounded border border-amber-600/20">YouTube Playlist</button>
+                <button type="button" onclick="fillTitle('College Xerox Notes & Question Bank')" class="hover:underline bg-amber-950/40 px-2 py-0.5 rounded border border-amber-600/20">Xerox Notes</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Field 3: Prayer / Wish (Optional) -->
+        <div class="space-y-1.5 pt-1">
+          <label for="devoteePrayer" class="block text-xs font-semibold text-amber-300 uppercase tracking-wider">
+            Prayer to Devi (Optional)
+          </label>
+          <input type="text" id="devoteePrayer" maxlength="240" placeholder="e.g. Devi, please make sure the question paper is easy and pass me with full marks!" class="w-full px-4 py-2.5 rounded-xl bg-[#17050d] border border-amber-500/30 text-amber-100 placeholder-amber-400/30 focus:border-amber-400 outline-none text-sm transition-all" />
+        </div>
+
+        <!-- Submit CTA Button -->
+        <div class="pt-3 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-amber-500/20">
+          <div class="text-xs text-amber-300/80 flex items-center gap-1.5">
+            <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+            <span>Exempt from studying: <strong>Sunday evening (Oct 18) to Wednesday morning (Oct 21)</strong>.</span>
+          </div>
+
+          <button type="submit" class="w-full sm:w-auto px-8 py-3 rounded-2xl font-cinzel font-bold text-xs sm:text-sm text-amber-950 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 hover:from-amber-300 hover:to-yellow-300 shadow-xl shadow-amber-500/30 hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2">
+            <span>Surrender at Devi's Feet 🙏</span>
+            <i data-lucide="check" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+      </form>
+
+    </section>
+
+    <!-- 🚫 SECTION 3: SACRED DEVOTEE SHELF -->
+    <section id="devoteeShelfSection" class="relative rounded-3xl bg-gradient-to-b from-[#230713] via-[#1a060f] to-[#12050b] border border-amber-500/30 p-6 sm:p-8 shadow-2xl">
+      
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-5 border-b border-amber-500/20">
+        <div>
+          <div class="inline-flex items-center gap-2 text-amber-400 text-xs font-bold uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-rose-500 animate-ping"></span>
+            <span>Surrendered Study Materials</span>
+          </div>
+          <h3 class="text-xl sm:text-2xl font-cinzel font-bold text-amber-100 mt-1">
+            Materials Under Divine Custody
+          </h3>
+          <p class="text-xs text-amber-300/80 font-light mt-0.5">
+            Placed safely at Goddess Saraswati's feet. Do not click to study before Wednesday!
+          </p>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <span class="text-xs text-amber-300 bg-amber-950/70 border border-amber-500/30 px-3 py-1.5 rounded-xl flex items-center gap-1.5">
+            <i data-lucide="lock" class="w-3.5 h-3.5 text-rose-400"></i>
+            <span>Locked until <strong>Wednesday Morning</strong></span>
+          </span>
+          <button onclick="clearAllItemsConfirm()" title="Clear all surrendered materials" class="text-xs text-amber-400/60 hover:text-rose-400 p-2 rounded-xl hover:bg-rose-950/30 transition-colors">
+            <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Warning note -->
+      <div class="mt-4 p-3.5 rounded-2xl bg-gradient-to-r from-rose-950/50 via-amber-950/40 to-rose-950/50 border border-rose-500/30 flex items-center gap-3">
+        <div class="w-8 h-8 rounded-full bg-rose-600/20 border border-rose-500/50 flex items-center justify-center text-rose-300 flex-shrink-0 text-sm">
+          ⚠️
+        </div>
+        <p class="text-xs text-amber-200/90 leading-relaxed">
+          <strong class="text-rose-400 font-semibold">Important Rule:</strong>
+          Clicking any material below before Wednesday morning triggers the <strong>Maha Paapam Anti-Study Alarm</strong>! Close your tabs, enjoy snacks, and take a nap.
+        </p>
+      </div>
+
+      <!-- Devotee Items Grid -->
+      <div id="itemsGrid" class="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-h-[820px] overflow-y-auto pr-1">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <!-- Empty State -->
+      <div id="emptyShelfState" class="hidden text-center py-12 px-4">
+        <div class="w-14 h-14 mx-auto rounded-full bg-amber-950/60 border border-amber-500/30 flex items-center justify-center text-2xl mb-3">
+          🛕
+        </div>
+        <h4 class="text-base font-cinzel text-amber-200 font-semibold">No materials surrendered yet</h4>
+        <p class="text-xs text-amber-400/60 max-w-sm mx-auto mt-1">
+          Use the form above to upload a PDF or enter your notes!
+        </p>
+      </div>
+
+    </section>
+
+    <!-- 📜 SECTION 4: WEDNESDAY EXEMPTION CERTIFICATE BANNER -->
+    <section class="relative rounded-3xl bg-gradient-to-r from-amber-950/70 via-[#270b17] to-amber-950/70 border-2 border-amber-500/40 p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
+      <div class="flex items-center gap-4 text-center md:text-left">
+        <div class="w-14 h-14 rounded-2xl kasavu-gold-gradient p-[2px] flex-shrink-0 shadow-lg shadow-amber-500/30">
+          <div class="w-full h-full rounded-2xl bg-[#1e0712] flex items-center justify-center text-2xl">
+            📜
+          </div>
+        </div>
+        <div>
+          <h4 class="text-lg sm:text-xl font-cinzel font-bold text-amber-100">
+            Official Pooja Veppu Exemption Certificate
+          </h4>
+          <p class="text-xs sm:text-sm text-amber-300/80 font-light mt-0.5 max-w-xl">
+            Official certificate validated for <strong>Wednesday, October 21, 2026</strong>. Download the high-resolution certificate to show parents, teachers, and WhatsApp groups!
+          </p>
+        </div>
+      </div>
+
+      <button onclick="openCertificateModal()" class="px-6 py-3 rounded-2xl font-cinzel font-bold text-xs sm:text-sm text-amber-950 bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 hover:from-amber-200 hover:to-yellow-300 shadow-xl shadow-amber-500/30 hover:scale-105 active:scale-95 transition-all flex items-center gap-2 flex-shrink-0">
+        <i data-lucide="download" class="w-4 h-4"></i>
+        <span>View Wednesday Certificate</span>
+      </button>
+    </section>
+
+    <!-- 🌾 SECTION 5: DIGITAL VIDYARAMBHAM TEASER -->
+    <section class="relative rounded-3xl bg-gradient-to-b from-[#1c0610] to-[#12050b] border border-amber-500/20 p-6 sm:p-8 text-center space-y-3">
+      <div class="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold">
+        <span>🌾</span>
+        <span>Wednesday Morning Ritual (Oct 21)</span>
+        <span>🌾</span>
+      </div>
+      <h3 class="text-xl sm:text-2xl font-cinzel font-bold text-amber-100">
+        The Sacred Golden Rice Plate (Vidyarambham)
+      </h3>
+      <p class="text-xs sm:text-sm text-amber-200/80 max-w-xl mx-auto font-light leading-relaxed">
+        On Wednesday morning, students retrieve their books and write <strong class="text-amber-300 font-malayalam">"ഹരി ശ്രീ ഗണപതയേ നമഃ"</strong> or <strong class="text-amber-300">"Om"</strong> on golden raw rice to officially unlock their materials with +100 Brainpower.
+      </p>
+      <div>
+        <button onclick="openVidyarambhamModal()" class="px-6 py-2.5 rounded-xl bg-amber-950/80 hover:bg-amber-900 border border-amber-500/40 text-amber-200 font-semibold text-xs sm:text-sm hover:scale-105 active:scale-95 transition-all inline-flex items-center gap-2 shadow-lg">
+          <i data-lucide="sparkles" class="w-4 h-4 text-amber-400"></i>
+          <span>Open Interactive Rice Plate (വിദ്യാരംഭം)</span>
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Clean Footer with Cultural & Privacy Compliance Disclaimer -->
+  <footer class="relative z-20 mt-12 border-t border-amber-500/20 bg-[#17050d] py-6 text-xs text-amber-400/70">
+    <div class="max-w-6xl mx-auto px-4 space-y-4">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+        <div class="flex items-center gap-2">
+          <span class="text-amber-400">🛕</span>
+          <span class="font-cinzel font-bold text-amber-300">Digital Pooja Veppu</span>
+          <span>— Sunday, Oct 18 (Evening) to Wednesday, Oct 21 (Morning)</span>
+        </div>
+        <div class="flex items-center gap-2 text-[11px] text-amber-300/80">
+          <span>May Saraswati Devi Bless Your Studies & GPA 🌟</span>
+        </div>
+      </div>
+
+      <!-- Legal & Privacy Disclaimer -->
+      <div class="pt-3 border-t border-amber-500/10 text-center text-[11px] text-amber-300/60 leading-relaxed max-w-4xl mx-auto space-y-1">
+        <p>
+          <strong>Non-Commercial Tribute & Privacy Statement:</strong> Digital Pooja Veppu (Cyber Sannidhanam) is a non-commercial, lighthearted cultural tribute created for students celebrating Navratri, Durgashtami, and Vijayadashami traditions.
+        </p>
+        <p>
+          <strong>Zero-Data Collection Guarantee:</strong> Zero personal data, names, URLs, prayers, or uploaded PDF documents are transmitted to external servers, APIs, or analytics. All offering states and certificates remain strictly client-side inside your browser's <code class="text-amber-300/80 font-mono">localStorage</code>.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 📱 MOBILE STICKY FLOATING QUICK-ACTION DOCK (Only visible on mobile devices) -->
+  <nav class="fixed bottom-3 left-3 right-3 z-40 md:hidden bg-[#1d0611]/95 backdrop-blur-xl border border-amber-500/40 rounded-2xl p-1.5 pb-[calc(0.375rem+env(safe-area-inset-bottom,0px))] shadow-[0_10px_35px_rgba(0,0,0,0.85)] flex items-center justify-around text-xs kasavu-border">
+    <!-- 1. Ring Bell Quick Action -->
+    <button onclick="ringTempleBell()" class="flex flex-col items-center justify-center py-1 px-2.5 rounded-xl text-amber-300 hover:text-amber-100 active:scale-90 transition-transform">
+      <span class="text-base leading-none">🔔</span>
+      <span class="text-[10px] font-semibold mt-0.5">Bell (<span id="mobileBellCount">0</span>)</span>
+    </button>
+
+    <!-- 2. Pushpanjali Flower Petals -->
+    <button onclick="offerPushpanjali()" class="flex flex-col items-center justify-center py-1 px-2.5 rounded-xl text-amber-300 hover:text-amber-100 active:scale-90 transition-transform">
+      <span class="text-base leading-none">🌸</span>
+      <span class="text-[10px] font-semibold mt-0.5">Petals</span>
+    </button>
+
+    <!-- 3. Rice Tray (Vidyarambham) -->
+    <button onclick="openVidyarambhamModal()" class="flex flex-col items-center justify-center py-1 px-3 rounded-xl bg-amber-500/20 border border-amber-500/30 text-amber-200 active:scale-90 transition-transform">
+      <span class="text-base leading-none">🌾</span>
+      <span class="text-[10px] font-bold mt-0.5">Rice Tray</span>
+    </button>
+
+    <!-- 4. Wednesday Certificate -->
+    <button onclick="openCertificateModal()" class="flex flex-col items-center justify-center py-1 px-2.5 rounded-xl text-amber-300 hover:text-amber-100 active:scale-90 transition-transform">
+      <span class="text-base leading-none">📜</span>
+      <span class="text-[10px] font-semibold mt-0.5">Certificate</span>
+    </button>
+  </nav>
+
+  <!-- ==================== MODALS ==================== -->
+
+  <!-- 🚨 MODAL 1: THE ANTI-STUDY TRAP -->
+  <div id="antiStudyModal" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/85 backdrop-blur-md hidden transition-opacity duration-300 opacity-0">
+    <div class="relative w-full max-w-lg max-h-[88vh] overflow-y-auto rounded-3xl bg-gradient-to-b from-[#3a0715] via-[#220610] to-[#14030a] border-4 border-rose-600 p-4 sm:p-8 text-center shadow-[0_0_80px_rgba(225,29,72,0.6)] transform scale-95 transition-transform duration-300">
+      
+      <div class="w-14 sm:w-16 h-14 sm:h-16 mx-auto rounded-full bg-rose-600/30 border-2 border-rose-500 flex items-center justify-center text-2xl sm:text-3xl animate-bounce shadow-[0_0_25px_#e11d48]">
+        🪓
+      </div>
+
+      <div class="mt-3 sm:mt-4 space-y-1 sm:space-y-1.5">
+        <div class="inline-block px-3 py-0.5 rounded-full bg-rose-600/40 text-rose-300 border border-rose-500 text-[10px] sm:text-[11px] font-bold tracking-wider uppercase">
+          🚨 Spiritual Alert
+        </div>
+        <h3 class="text-xl sm:text-3xl font-cinzel font-black text-rose-300">
+          AIYYO! MAHA PAAPAM! 🙅‍♂️
+        </h3>
+        <p class="text-xs font-semibold text-amber-300 font-malayalam">
+          പൂജാവെയ്പ്പിൽ പുസ്തകം തൊടാൻ പാടില്ല!
+        </p>
+      </div>
+
+      <div class="mt-3 sm:mt-4 p-3.5 sm:p-4 rounded-2xl bg-black/50 border border-rose-500/30 text-xs sm:text-sm text-rose-100/90 leading-relaxed text-left space-y-2">
+        <p>
+          You dare touch your study material during <strong>Pooja Veppu</strong>?! Devi is watching you!
+        </p>
+        <p>
+          Touching books, opening coding repos, or revising formulas before <strong class="text-amber-300">Wednesday morning (Oct 21)</strong> is strictly forbidden!
+        </p>
+        <div class="pt-2 border-t border-rose-500/20 text-amber-300 font-medium">
+          <strong>What you should do right now:</strong>
+          <ul class="list-disc list-inside mt-1 space-y-1 text-xs text-amber-200/90">
+            <li>Close this tab immediately with both hands 🙏</li>
+            <li>Eat some banana chips, unniyappam, or snacks 🍌</li>
+            <li>Take a nice guilt-free nap 😴</li>
+            <li>Wait peacefully until Wednesday morning! ✨</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-5 sm:mt-6 flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-3">
+        <button onclick="closeAntiStudyModal()" class="w-full sm:w-auto px-6 py-2.5 rounded-xl font-cinzel font-bold text-xs text-white bg-gradient-to-r from-rose-600 to-rose-700 hover:from-rose-500 hover:to-rose-600 shadow-lg transition-all hover:scale-105 active:scale-95">
+          I Repent! (Close Tab & Go Sleep 😴)
+        </button>
+        <button onclick="closeAntiStudyModal()" class="w-full sm:w-auto px-5 py-2.5 rounded-xl text-xs font-semibold text-amber-300/80 hover:text-amber-200 bg-amber-950/40 hover:bg-amber-900/40 border border-amber-500/30 transition-all active:scale-95">
+          Devi Kshamikkuka (Devi Forgive Me 🙏)
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 🔒 MODAL 2: CERTIFICATE LOCKED UNTIL WEDNESDAY MORNING -->
+  <div id="certLockedModal" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/85 backdrop-blur-md hidden transition-opacity duration-300 opacity-0">
+    <div class="relative w-full max-w-lg max-h-[88vh] overflow-y-auto rounded-3xl bg-gradient-to-b from-[#2e0717] via-[#1a050e] to-[#12050b] border-2 border-amber-500/50 p-4 sm:p-8 text-center shadow-2xl transform scale-95 transition-transform duration-300">
+      
+      <!-- Close Button -->
+      <button onclick="closeCertLockedModal()" class="absolute top-3 sm:top-4 right-3 sm:right-4 w-8 h-8 rounded-full bg-amber-950/80 hover:bg-amber-900 border border-amber-500/40 text-amber-300 flex items-center justify-center text-sm active:scale-95">
+        ✕
+      </button>
+
+      <!-- Sacred Lock Icon -->
+      <div class="w-14 sm:w-16 h-14 sm:h-16 mx-auto rounded-full bg-amber-500/20 border-2 border-amber-400 flex items-center justify-center text-2xl sm:text-3xl shadow-[0_0_25px_rgba(251,191,36,0.4)]">
+        🔒
+      </div>
+
+      <div class="mt-4 space-y-1.5">
+        <div class="inline-block px-3 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[11px] font-bold tracking-wider uppercase">
+          Pooja Veppu In Progress
+        </div>
+        <h3 class="text-xl sm:text-2xl font-cinzel font-bold text-amber-100">
+          Certificate Unlocks on Wednesday Morning!
+        </h3>
+        <p class="text-xs text-amber-300/80">
+          October 21, 2026 at 06:00 AM (Vijayadashami / Pooja Eduppu)
+        </p>
+      </div>
+
+      <div class="mt-4 p-4 rounded-2xl bg-black/50 border border-amber-500/20 text-xs sm:text-sm text-amber-100/90 leading-relaxed text-left space-y-2">
+        <p>
+          🙏 <strong>Sacred Pooja Veppu Rule:</strong>
+        </p>
+        <p>
+          Your books and study materials are currently in divine custody at Goddess Saraswati's feet. As per tradition, the <strong>Official Pooja Eduppu Certificate</strong> is only released on <strong>Wednesday morning</strong> when the books are blessed and retrieved!
+        </p>
+        <div class="p-3 rounded-xl bg-amber-950/60 border border-amber-500/30 text-center">
+          <p class="text-[11px] text-amber-400 font-semibold mb-1">Time Remaining until Certificate Release:</p>
+          <div id="lockedCertCountdown" class="font-mono text-sm font-bold text-amber-200">
+            <!-- Updated via timer -->
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-5 flex flex-col sm:flex-row items-center justify-center gap-3">
+        <button onclick="closeCertLockedModal()" class="w-full sm:w-auto px-6 py-2.5 rounded-xl font-cinzel font-bold text-xs text-amber-950 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 shadow-lg transition-all hover:scale-105 active:scale-95">
+          I Will Wait! (Close & Relax 😴)
+        </button>
+        <button onclick="unlockCertificateForPreview()" class="w-full sm:w-auto px-4 py-2.5 rounded-xl text-xs font-semibold text-amber-400/80 hover:text-amber-200 bg-amber-950/40 hover:bg-amber-900/60 border border-amber-500/30 transition-all">
+          Preview Anyway (Test Mode ✨)
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 📜 MODAL 3: OFFICIAL WEDNESDAY EXEMPTION CERTIFICATE VIEWER -->
+  <div id="certificateModal" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/85 backdrop-blur-md hidden transition-opacity duration-300 opacity-0">
+    <div class="relative w-full max-w-4xl max-h-[92vh] overflow-y-auto rounded-3xl bg-gradient-to-b from-[#250714] via-[#1a050e] to-[#12050b] border-2 border-amber-500/40 p-4 sm:p-7 text-center shadow-2xl">
+      
+      <button onclick="closeCertificateModal()" class="absolute top-3 sm:top-4 right-3 sm:right-4 w-8 h-8 rounded-full bg-amber-950/80 hover:bg-amber-900 border border-amber-500/40 text-amber-300 flex items-center justify-center text-sm transition-transform hover:scale-110 active:scale-95">
+        ✕
+      </button>
+
+      <div class="space-y-1 mb-3">
+        <span class="text-amber-400 text-xs font-bold uppercase tracking-wider">
+          🏛️ OFFICIAL CYBER DEVASWOM BOARD
+        </span>
+        <h3 class="text-xl sm:text-2xl font-cinzel font-bold text-amber-100">
+          Official Pooja Veppu Immunity Certificate
+        </h3>
+        <p class="text-xs text-amber-300/80 font-light">
+          Official Certificate Validated for <strong>Wednesday, October 21, 2026</strong>
+        </p>
+      </div>
+
+      <!-- Certificate Canvas -->
+      <div class="relative flex items-center justify-center my-3 overflow-hidden rounded-2xl border-2 border-amber-500/30 bg-black/60 p-2 shadow-inner">
+        <canvas id="certCanvas" width="1200" height="800" class="w-full max-w-2xl h-auto rounded-xl shadow-2xl kasavu-border"></canvas>
+      </div>
+
+      <!-- Download Button -->
+      <div class="mt-4 flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-3 w-full">
+        <button onclick="downloadCertificatePNG()" class="w-full sm:w-auto px-6 py-3 sm:py-2.5 rounded-xl font-cinzel font-bold text-xs sm:text-sm text-amber-950 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 hover:from-amber-300 hover:to-yellow-300 shadow-xl shadow-amber-500/30 hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2">
+          <i data-lucide="download" class="w-4 h-4"></i>
+          <span>Download Certificate (.PNG)</span>
+        </button>
+        <button onclick="generateFreshCertificate()" class="w-full sm:w-auto px-4 py-2.5 rounded-xl text-xs text-amber-300 bg-amber-950/60 hover:bg-amber-900 border border-amber-500/30 transition-all flex items-center justify-center gap-1.5 active:scale-95">
+          <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i>
+          <span>Refresh Details</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 🌾 MODAL 4: DIGITAL VIDYARAMBHAM (RICE TRAY) -->
+  <div id="vidyarambhamModal" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/85 backdrop-blur-md hidden transition-opacity duration-300 opacity-0">
+    <div class="relative w-full max-w-2xl max-h-[92vh] overflow-y-auto rounded-3xl bg-gradient-to-b from-[#240612] via-[#1a050e] to-[#12050b] border-2 border-amber-500/40 p-4 sm:p-6 text-center shadow-2xl">
+      
+      <button onclick="closeVidyarambhamModal()" class="absolute top-3 sm:top-4 right-3 sm:right-4 w-8 h-8 rounded-full bg-amber-950/80 hover:bg-amber-900 border border-amber-500/40 text-amber-300 flex items-center justify-center text-sm transition-transform hover:scale-110 active:scale-95">
+        ✕
+      </button>
+
+      <div class="space-y-1 mb-2">
+        <div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[10px] sm:text-[11px] font-semibold">
+          <span>🌾</span>
+          <span>Wednesday Morning Ritual (വിദ്യാരംഭം)</span>
+          <span>🌾</span>
+        </div>
+        <h3 class="text-xl sm:text-2xl font-cinzel font-bold text-amber-100">
+          The Brass Rice Plate (അരിയിൽ എഴുത്ത്)
+        </h3>
+        <p class="text-xs text-amber-300/80 max-w-md mx-auto">
+          Trace with your finger or mouse over the golden raw rice to write <strong class="text-amber-200 font-malayalam">"ഹരി ശ്രീ"</strong> or <strong class="text-amber-200">"Om"</strong>!
+        </p>
+      </div>
+
+      <!-- Tracing Selector -->
+      <div class="flex flex-wrap items-center justify-between gap-2 max-w-lg mx-auto mb-2 px-1 text-xs">
+        <div class="flex flex-wrap items-center gap-1.5 sm:gap-2">
+          <span class="text-amber-400 font-semibold text-[11px] sm:text-xs">Guide:</span>
+          <button id="guideMalayalamBtn" onclick="setRiceGuide('malayalam')" class="px-2 sm:px-2.5 py-1 rounded bg-amber-600 text-amber-950 font-bold border border-amber-400 text-[10px] sm:text-xs active:scale-95">Hari Sri (മലയാളം)</button>
+          <button id="guideOmBtn" onclick="setRiceGuide('om')" class="px-2 sm:px-2.5 py-1 rounded bg-amber-950/80 text-amber-300 border border-amber-600/30 hover:bg-amber-900/60 text-[10px] sm:text-xs active:scale-95">ॐ (Om)</button>
+          <button id="guideFreeBtn" onclick="setRiceGuide('free')" class="px-2 sm:px-2.5 py-1 rounded bg-amber-950/80 text-amber-300 border border-amber-600/30 hover:bg-amber-900/60 text-[10px] sm:text-xs active:scale-95">Freehand</button>
+        </div>
+        <button onclick="resetRiceCanvas()" class="text-amber-400 hover:text-amber-200 flex items-center gap-1 font-semibold text-[11px] sm:text-xs active:scale-95 py-0.5 px-2 rounded-lg bg-amber-950/50">
+          <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i> Clear Rice
+        </button>
+      </div>
+
+      <!-- Rice Plate Canvas -->
+      <div class="relative w-full max-w-[300px] sm:max-w-lg mx-auto aspect-square rounded-full kasavu-border p-2 sm:p-3 bg-gradient-to-br from-amber-700 via-amber-800 to-amber-950 shadow-[0_0_50px_rgba(245,158,11,0.3)] flex items-center justify-center overflow-hidden">
+        <div class="w-full h-full rounded-full border-2 sm:border-4 border-amber-300/60 p-1.5 sm:p-2 bg-gradient-to-b from-amber-600 to-amber-900 flex items-center justify-center relative shadow-inner">
+          
+          <div id="riceWatermark" class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none select-none z-0">
+            <span id="guideTextLarge" class="text-amber-900/40 text-3xl sm:text-5xl font-malayalam font-bold tracking-wider">
+              ഹരി ശ്രീ ഗണപതയേ നമഃ
+            </span>
+            <span id="guideTextSub" class="text-amber-900/30 text-[10px] sm:text-xs font-serif tracking-widest mt-1">
+              HARI SRI GANAPATAYE NAMAH
+            </span>
+          </div>
+
+          <canvas id="riceCanvas" width="480" height="480" class="w-full h-full rounded-full relative z-10 touch-none"></canvas>
+          
+        </div>
+      </div>
+
+      <!-- Completion CTA -->
+      <div class="mt-4 space-y-1.5">
+        <button onclick="completeVidyarambhamBlessing()" class="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-2.5 rounded-2xl font-cinzel font-bold text-xs sm:text-sm text-amber-950 bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 hover:from-amber-200 hover:via-yellow-300 shadow-xl shadow-amber-500/40 hover:scale-105 active:scale-95 transition-all inline-flex items-center justify-center gap-2">
+          <span>Complete Pooja Eduppu & Consecrate Materials ✨</span>
+        </button>
+        <p class="text-[10px] sm:text-[11px] text-amber-400/70">
+          Unlocks your surrendered materials with "+100 Brainpower" and Saraswati Kataksham!
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==================== JAVASCRIPT ==================== -->
+  <script>
+    // -------------------------------------------------------------------------
+    // 1. STATE & STORAGE MANAGEMENT (GENUINE DEVOTEE FILES ONLY - NO SAMPLES)
+    // -------------------------------------------------------------------------
+    const STORAGE_KEY = 'pooja_veppu_store_v4';
+
+    const defaultState = {
+      items: [],
+      altar: {
+        flameLeft: true,
+        flameRight: true,
+        agarbatti: true,
+        bellRings: 0,
+        pushpanjaliOffered: 0
+      }
+    };
+
+    let appState = loadState();
+    let selectedUploadedPDF = null;
+    let forceUnlockCertificate = false;
+
+    function loadState() {
+      try {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          // Keep strictly genuine user submitted files: purge all sample/example items
+          const realItems = (parsed.items || []).filter(item => {
+            if (!item) return false;
+            if (item.isSample === true) return false;
+            if (typeof item.id === 'string' && item.id.startsWith('item_sample_')) return false;
+            if (['Arjun', 'Ananya', 'Deepak'].includes(item.devotee) && 
+                (item.title && (item.title.includes('Microprocessors') || item.title.includes('Laxmikanth') || item.title.includes('Chrome Tabs on System Architecture')))) {
+              return false;
+            }
+            return true;
+          });
+
+          const loadedState = {
+            items: realItems,
+            altar: { ...defaultState.altar, ...(parsed.altar || {}) }
+          };
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(loadedState));
+          return loadedState;
+        }
+      } catch (e) {
+        console.error('Storage error:', e);
+      }
+      return JSON.parse(JSON.stringify(defaultState));
+    }
+
+    function saveState() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(appState));
+      } catch (e) {
+        console.error('Save state failed:', e);
+      }
+    }
+
+    // -------------------------------------------------------------------------
+    // 2. WEB AUDIO API - ONLY PLAYS BELL SOUND WHEN BELL IS CLICKED
+    // -------------------------------------------------------------------------
+    let audioCtx = null;
+    let droneOscs = [];
+    let droneGain = null;
+    let isDronePlaying = false;
+
+    function getAudioContext() {
+      if (!audioCtx) {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        audioCtx = new AudioContext();
+      }
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+      return audioCtx;
+    }
+
+    // Bell Sound: ONLY called from ringTempleBell()
+    function playTempleBellAudio() {
+      const ctx = getAudioContext();
+      const now = ctx.currentTime;
+
+      const baseFreq = 587.33; // D5
+      const partials = [
+        { ratio: 1.0, gain: 0.8, decay: 3.5 },
+        { ratio: 1.32, gain: 0.6, decay: 2.8 },
+        { ratio: 1.74, gain: 0.5, decay: 2.2 },
+        { ratio: 2.00, gain: 0.4, decay: 2.0 },
+        { ratio: 2.85, gain: 0.35, decay: 1.5 },
+        { ratio: 3.92, decay: 1.0, gain: 0.25 }
+      ];
+
+      const masterGain = ctx.createGain();
+      masterGain.gain.setValueAtTime(0.7, now);
+      masterGain.connect(ctx.destination);
+
+      partials.forEach(p => {
+        const osc = ctx.createOscillator();
+        const pGain = ctx.createGain();
+
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(baseFreq * p.ratio, now);
+
+        pGain.gain.setValueAtTime(0, now);
+        pGain.gain.linearRampToValueAtTime(p.gain, now + 0.005);
+        pGain.gain.exponentialRampToValueAtTime(0.0001, now + p.decay);
+
+        osc.connect(pGain);
+        pGain.connect(masterGain);
+
+        osc.start(now);
+        osc.stop(now + p.decay + 0.1);
+      });
+
+      // Clapper strike click
+      const strikeOsc = ctx.createOscillator();
+      const strikeGain = ctx.createGain();
+      strikeOsc.type = 'triangle';
+      strikeOsc.frequency.setValueAtTime(1200, now);
+      strikeGain.gain.setValueAtTime(0.3, now);
+      strikeGain.gain.exponentialRampToValueAtTime(0.001, now + 0.04);
+      strikeOsc.connect(strikeGain);
+      strikeGain.connect(masterGain);
+      strikeOsc.start(now);
+      strikeOsc.stop(now + 0.05);
+    }
+
+    // Ambient Divine Drone
+    function toggleDivineDrone() {
+      const ctx = getAudioContext();
+      if (isDronePlaying) {
+        stopDivineDrone();
+      } else {
+        startDivineDrone(ctx);
+      }
+    }
+
+    function startDivineDrone(ctx) {
+      if (isDronePlaying) return;
+      const now = ctx.currentTime;
+
+      droneGain = ctx.createGain();
+      droneGain.gain.setValueAtTime(0, now);
+      droneGain.gain.linearRampToValueAtTime(0.18, now + 1.2);
+      droneGain.connect(ctx.destination);
+
+      const filter = ctx.createBiquadFilter();
+      filter.type = 'lowpass';
+      filter.frequency.setValueAtTime(420, now);
+      filter.connect(droneGain);
+
+      const droneFreqs = [130.81, 131.2, 196.0, 261.63];
+      droneOscs = droneFreqs.map(freq => {
+        const osc = ctx.createOscillator();
+        osc.type = 'sawtooth';
+        osc.frequency.setValueAtTime(freq, now);
+        osc.connect(filter);
+        osc.start(now);
+        return osc;
+      });
+
+      isDronePlaying = true;
+      updateDroneUI(true);
+    }
+
+    function stopDivineDrone() {
+      if (!isDronePlaying || !audioCtx) return;
+      const now = audioCtx.currentTime;
+
+      if (droneGain) {
+        droneGain.gain.linearRampToValueAtTime(0.001, now + 0.6);
+      }
+      setTimeout(() => {
+        droneOscs.forEach(o => {
+          try { o.stop(); } catch(e){}
+        });
+        droneOscs = [];
+        isDronePlaying = false;
+        updateDroneUI(false);
+      }, 650);
+    }
+
+    function updateDroneUI(playing) {
+      const icon = document.getElementById('audioIcon');
+      const label = document.getElementById('audioLabel');
+      if (playing) {
+        icon.setAttribute('data-lucide', 'volume-2');
+        label.textContent = 'Ambient: On';
+        label.classList.add('text-amber-300', 'font-bold');
+      } else {
+        icon.setAttribute('data-lucide', 'volume-x');
+        label.textContent = 'Ambient: Off';
+        label.classList.remove('text-amber-300', 'font-bold');
+      }
+      lucide.createIcons();
+    }
+
+    // Anti-Study Alarm Sound
+    function playMahaPaapamWarningAudio() {
+      const ctx = getAudioContext();
+      const now = ctx.currentTime;
+
+      const osc1 = ctx.createOscillator();
+      const osc2 = ctx.createOscillator();
+      const gain = ctx.createGain();
+
+      osc1.type = 'sawtooth';
+      osc2.type = 'square';
+      osc1.frequency.setValueAtTime(82, now);
+      osc2.frequency.setValueAtTime(118, now);
+
+      gain.gain.setValueAtTime(0.7, now);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + 1.8);
+
+      osc1.connect(gain);
+      osc2.connect(gain);
+      gain.connect(ctx.destination);
+
+      osc1.start(now);
+      osc2.start(now);
+      osc1.stop(now + 1.9);
+      osc2.stop(now + 1.9);
+    }
+
+    // Rice Rustle Sound
+    let lastRiceSoundTime = 0;
+    function playRiceGrainAudio() {
+      const now = Date.now();
+      if (now - lastRiceSoundTime < 70) return;
+      lastRiceSoundTime = now;
+
+      const ctx = getAudioContext();
+      const ct = ctx.currentTime;
+      const bufferSize = ctx.sampleRate * 0.035;
+      const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+      const data = buffer.getChannelData(0);
+      for (let i = 0; i < bufferSize; i++) {
+        data[i] = (Math.random() * 2 - 1) * Math.exp(-i / (bufferSize * 0.4));
+      }
+
+      const noise = ctx.createBufferSource();
+      noise.buffer = buffer;
+
+      const filter = ctx.createBiquadFilter();
+      filter.type = 'bandpass';
+      filter.frequency.setValueAtTime(2600 + (Math.random() * 600), ct);
+      filter.Q.setValueAtTime(4, ct);
+
+      const gain = ctx.createGain();
+      gain.gain.setValueAtTime(0.18, ct);
+      gain.gain.exponentialRampToValueAtTime(0.001, ct + 0.035);
+
+      noise.connect(filter);
+      filter.connect(gain);
+      gain.connect(ctx.destination);
+      noise.start(ct);
+    }
+
+    // Shankh Conch Shell
+    function playConchShankhAudio() {
+      const ctx = getAudioContext();
+      const now = ctx.currentTime;
+
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      const filter = ctx.createBiquadFilter();
+
+      osc.type = 'sawtooth';
+      osc.frequency.setValueAtTime(260, now);
+      osc.frequency.linearRampToValueAtTime(370, now + 0.8);
+      osc.frequency.linearRampToValueAtTime(390, now + 1.8);
+
+      filter.type = 'bandpass';
+      filter.frequency.setValueAtTime(750, now);
+      filter.Q.setValueAtTime(3, now);
+
+      gain.gain.setValueAtTime(0.001, now);
+      gain.gain.linearRampToValueAtTime(0.6, now + 0.5);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + 2.8);
+
+      osc.connect(filter);
+      filter.connect(gain);
+      gain.connect(ctx.destination);
+
+      osc.start(now);
+      osc.stop(now + 2.9);
+    }
+
+    // -------------------------------------------------------------------------
+    // 3. ALTAR CONTROLS (NILAVILAKKU, BELL, PUSHPANJALI)
+    // -------------------------------------------------------------------------
+    function toggleNilavilakku(side) {
+      if (side === 'left') {
+        appState.altar.flameLeft = !appState.altar.flameLeft;
+        applyFlameState('flameLeft', appState.altar.flameLeft);
+      } else {
+        appState.altar.flameRight = !appState.altar.flameRight;
+        applyFlameState('flameRight', appState.altar.flameRight);
+      }
+      saveState();
+    }
+
+    function applyFlameState(elementId, isLit) {
+      const el = document.getElementById(elementId);
+      if (!el) return;
+      if (isLit) {
+        el.style.opacity = '1';
+        el.style.transform = 'scale(1)';
+        el.style.pointerEvents = 'auto';
+      } else {
+        el.style.opacity = '0';
+        el.style.transform = 'scale(0.2)';
+        el.style.pointerEvents = 'none';
+      }
+    }
+
+    // Temple Bell (RINGS ONLY HERE!)
+    function ringTempleBell() {
+      const bell = document.getElementById('templeBell');
+      if (bell) {
+        bell.classList.remove('animate-bell-ring');
+        void bell.offsetWidth;
+        bell.classList.add('animate-bell-ring');
+      }
+
+      appState.altar.bellRings = (appState.altar.bellRings || 0) + 1;
+      const bellEl = document.getElementById('bellCount');
+      if (bellEl) bellEl.textContent = appState.altar.bellRings;
+      const mobBellEl = document.getElementById('mobileBellCount');
+      if (mobBellEl) mobBellEl.textContent = appState.altar.bellRings;
+      saveState();
+
+      playTempleBellAudio();
+      const isMobile = window.innerWidth < 640;
+      spawnFallingPetals(isMobile ? 12 : 20);
+    }
+
+    // Pushpanjali Floral Shower
+    let petalsCanvas, petalsCtx;
+    let petalsList = [];
+
+    function initPetalsCanvas() {
+      petalsCanvas = document.getElementById('petalsCanvas');
+      if (!petalsCanvas) return;
+      petalsCtx = petalsCanvas.getContext('2d');
+      resizePetalsCanvas();
+      window.addEventListener('resize', resizePetalsCanvas);
+      requestAnimationFrame(renderPetalsLoop);
+    }
+
+    function resizePetalsCanvas() {
+      if (!petalsCanvas) return;
+      petalsCanvas.width = window.innerWidth;
+      petalsCanvas.height = window.innerHeight;
+    }
+
+    function offerPushpanjali() {
+      appState.altar.pushpanjaliOffered = (appState.altar.pushpanjaliOffered || 0) + 1;
+      document.getElementById('pushpanjaliCount').textContent = appState.altar.pushpanjaliOffered;
+      saveState();
+
+      const isMobile = window.innerWidth < 640;
+      spawnFallingPetals(isMobile ? 24 : 45);
+      spawnConfettiPetals(isMobile ? 18 : 30);
+    }
+
+    function spawnFallingPetals(count) {
+      const colors = ['#f59e0b', '#fbbf24', '#ff7700', '#ffffff', '#fef08a', '#f43f5e'];
+      for (let i = 0; i < count; i++) {
+        petalsList.push({
+          x: Math.random() * window.innerWidth,
+          y: -20 - Math.random() * 80,
+          size: 8 + Math.random() * 12,
+          speedY: 2 + Math.random() * 3,
+          speedX: (Math.random() - 0.5) * 2,
+          rotation: Math.random() * Math.PI * 2,
+          rotationSpeed: (Math.random() - 0.5) * 0.08,
+          scaleY: 1,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          isJasmine: Math.random() > 0.6
+        });
+      }
+    }
+
+    function renderPetalsLoop() {
+      if (!petalsCtx) return;
+      petalsCtx.clearRect(0, 0, petalsCanvas.width, petalsCanvas.height);
+
+      for (let i = petalsList.length - 1; i >= 0; i--) {
+        const p = petalsList[i];
+        p.y += p.speedY;
+        p.x += p.speedX + Math.sin(p.y * 0.015);
+        p.rotation += p.rotationSpeed;
+        p.scaleY = Math.cos(p.y * 0.04);
+
+        if (p.y > window.innerHeight + 40) {
+          petalsList.splice(i, 1);
+          continue;
+        }
+
+        petalsCtx.save();
+        petalsCtx.translate(p.x, p.y);
+        petalsCtx.rotate(p.rotation);
+        petalsCtx.scale(1, p.scaleY);
+
+        petalsCtx.fillStyle = p.color;
+        petalsCtx.beginPath();
+        if (p.isJasmine) {
+          for (let k = 0; k < 5; k++) {
+            petalsCtx.rotate((Math.PI * 2) / 5);
+            petalsCtx.ellipse(0, p.size * 0.5, p.size * 0.25, p.size * 0.5, 0, 0, Math.PI * 2);
+          }
+        } else {
+          petalsCtx.ellipse(0, 0, p.size * 0.5, p.size, 0, 0, Math.PI * 2);
+        }
+        petalsCtx.fill();
+        petalsCtx.restore();
+      }
+
+      requestAnimationFrame(renderPetalsLoop);
+    }
+
+    function spawnConfettiPetals(particleCount) {
+      if (typeof confetti === 'function') {
+        confetti({
+          particleCount: particleCount || 30,
+          spread: 70,
+          origin: { y: 0.35 },
+          colors: ['#ff7700', '#fbbf24', '#ffffff', '#dc2626', '#fef08a'],
+          shapes: ['circle'],
+          scalar: 1.1,
+          disableForReducedMotion: true
+        });
+      }
+    }
+
+    // -------------------------------------------------------------------------
+    // 4. MOVABLE AGARBATTI & FULL-ALTAR SMOKE SIMULATION (AARTI GESTURE)
+    // -------------------------------------------------------------------------
+    let isAgarbattiActive = true;
+    let smokeParticles = [];
+    let smokeCanvas, smokeCtx;
+    let agarbattiEl, altarEl;
+
+    let isDraggingAgarbatti = false;
+    let dragStartX = 0, dragStartY = 0;
+    let agarbattiCurrentX = 0, agarbattiCurrentY = 0;
+    let lastAgarbattiX = 0, lastAgarbattiY = 0;
+    let pointerMovedDist = 0;
+    let aartiToastTimeout = null;
+
+    function initSmokeSimulation() {
+      smokeCanvas = document.getElementById('smokeCanvas');
+      altarEl = document.getElementById('altarSection');
+      agarbattiEl = document.getElementById('draggableAgarbatti');
+
+      if (!smokeCanvas || !altarEl) return;
+      smokeCtx = smokeCanvas.getContext('2d');
+
+      resizeSmokeCanvas();
+      window.addEventListener('resize', resizeSmokeCanvas);
+
+      initAgarbattiDrag();
+      requestAnimationFrame(renderSmokeLoop);
+    }
+
+    function resizeSmokeCanvas() {
+      if (!smokeCanvas || !altarEl) return;
+      const rect = altarEl.getBoundingClientRect();
+      smokeCanvas.width = rect.width;
+      smokeCanvas.height = rect.height;
+    }
+
+    function initAgarbattiDrag() {
+      if (!agarbattiEl) return;
+
+      agarbattiEl.addEventListener('pointerdown', (e) => {
+        e.preventDefault();
+        isDraggingAgarbatti = true;
+        pointerMovedDist = 0;
+        dragStartX = e.clientX - agarbattiCurrentX;
+        dragStartY = e.clientY - agarbattiCurrentY;
+        lastAgarbattiX = e.clientX;
+        lastAgarbattiY = e.clientY;
+
+        agarbattiEl.setPointerCapture(e.pointerId);
+      });
+
+      agarbattiEl.addEventListener('pointermove', (e) => {
+        if (!isDraggingAgarbatti) return;
+
+        const newX = e.clientX - dragStartX;
+        const newY = e.clientY - dragStartY;
+
+        const dx = e.clientX - lastAgarbattiX;
+        const dy = e.clientY - lastAgarbattiY;
+        pointerMovedDist += Math.sqrt(dx * dx + dy * dy);
+
+        const tilt = Math.max(-20, Math.min(20, dx * 1.5));
+        const stickContainer = document.getElementById('agarbattiStickContainer');
+        if (stickContainer) {
+          stickContainer.style.transform = `rotate(${tilt}deg)`;
+        }
+
+        agarbattiCurrentX = newX;
+        agarbattiCurrentY = newY;
+        agarbattiEl.style.transform = `translate3d(${newX}px, ${newY}px, 0)`;
+
+        lastAgarbattiX = e.clientX;
+        lastAgarbattiY = e.clientY;
+
+        if (isAgarbattiActive && Math.random() < 0.6) {
+          spawnSmokeAtCurrentAgarbatti(dx, dy);
+        }
+
+        checkAartiProximity(e.clientX, e.clientY);
+      });
+
+      const handlePointerUp = (e) => {
+        if (!isDraggingAgarbatti) return;
+        isDraggingAgarbatti = false;
+
+        const stickContainer = document.getElementById('agarbattiStickContainer');
+        if (stickContainer) {
+          stickContainer.style.transform = `rotate(0deg)`;
+        }
+
+        try {
+          agarbattiEl.releasePointerCapture(e.pointerId);
+        } catch(err){}
+
+        if (pointerMovedDist < 6) {
+          toggleAgarbatti();
+        }
+      };
+
+      agarbattiEl.addEventListener('pointerup', handlePointerUp);
+      agarbattiEl.addEventListener('pointercancel', handlePointerUp);
+    }
+
+    function resetAgarbattiPosition(e) {
+      if (e) e.stopPropagation();
+      agarbattiCurrentX = 0;
+      agarbattiCurrentY = 0;
+      if (agarbattiEl) {
+        agarbattiEl.style.transition = 'transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)';
+        agarbattiEl.style.transform = 'translate3d(0, 0, 0)';
+        setTimeout(() => {
+          if (agarbattiEl) agarbattiEl.style.transition = '';
+        }, 450);
+      }
+    }
+
+    function checkAartiProximity(clientX, clientY) {
+      const deviImg = document.getElementById('saraswatiImage');
+      if (!deviImg) return;
+
+      const rect = deviImg.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+
+      const dist = Math.hypot(clientX - centerX, clientY - centerY);
+
+      if (dist < 180) {
+        triggerAartiAuraEffect();
+      }
+    }
+
+    function triggerAartiAuraEffect() {
+      const aura = document.getElementById('deviAuraGlow');
+      const toast = document.getElementById('aartiToast');
+
+      if (aura) {
+        aura.style.opacity = '1';
+        aura.style.transform = 'scale(1.22)';
+      }
+
+      if (toast) {
+        toast.style.opacity = '1';
+        if (aartiToastTimeout) clearTimeout(aartiToastTimeout);
+        aartiToastTimeout = setTimeout(() => {
+          toast.style.opacity = '0';
+          if (aura) {
+            aura.style.opacity = '';
+            aura.style.transform = '';
+          }
+        }, 2000);
+      }
+    }
+
+    function getAgarbattiTipCoordsOnCanvas() {
+      const ember = document.getElementById('ember1');
+      if (!ember || !smokeCanvas) return { x: 0, y: 0 };
+      const eRect = ember.getBoundingClientRect();
+      const cRect = smokeCanvas.getBoundingClientRect();
+      return {
+        x: eRect.left + eRect.width / 2 - cRect.left,
+        y: eRect.top + eRect.height / 2 - cRect.top
+      };
+    }
+
+    function spawnSmokeAtCurrentAgarbatti(vx = 0, vy = 0) {
+      const coords = getAgarbattiTipCoordsOnCanvas();
+      if (!coords.x || !coords.y) return;
+
+      if (smokeParticles.length > 120) {
+        smokeParticles.shift();
+      }
+
+      smokeParticles.push({
+        x: coords.x + (Math.random() * 6 - 3),
+        y: coords.y,
+        vx: (Math.random() - 0.5) * 0.5 - (vx * 0.15),
+        vy: -(0.8 + Math.random() * 0.9) - (vy * 0.1),
+        size: 2.5 + Math.random() * 2,
+        alpha: 0.65 + Math.random() * 0.3,
+        maxLife: 80 + Math.random() * 45,
+        life: 0
+      });
+    }
+
+    function toggleAgarbatti() {
+      isAgarbattiActive = !isAgarbattiActive;
+      appState.altar.agarbatti = isAgarbattiActive;
+      saveState();
+
+      const statusEl = document.getElementById('agarbattiStatus');
+      const ember1 = document.getElementById('ember1');
+      const ember2 = document.getElementById('ember2');
+
+      if (isAgarbattiActive) {
+        statusEl.textContent = 'Smoking';
+        statusEl.classList.remove('text-amber-500/50');
+        statusEl.classList.add('text-amber-200');
+        if (ember1) ember1.style.opacity = '1';
+        if (ember2) ember2.style.opacity = '1';
+      } else {
+        statusEl.textContent = 'Extinguished';
+        statusEl.classList.add('text-amber-500/50');
+        statusEl.classList.remove('text-amber-200');
+        if (ember1) ember1.style.opacity = '0.2';
+        if (ember2) ember2.style.opacity = '0.2';
+      }
+    }
+
+    function renderSmokeLoop() {
+      if (!smokeCtx || !smokeCanvas) return;
+      smokeCtx.clearRect(0, 0, smokeCanvas.width, smokeCanvas.height);
+
+      if (isAgarbattiActive && Math.random() < 0.45) {
+        spawnSmokeAtCurrentAgarbatti();
+      }
+
+      for (let i = smokeParticles.length - 1; i >= 0; i--) {
+        const p = smokeParticles[i];
+        p.life++;
+        p.x += p.vx + Math.sin(p.life * 0.05) * 0.4;
+        p.y += p.vy;
+        p.size += 0.22;
+        p.alpha -= 0.007;
+
+        if (p.life > p.maxLife || p.alpha <= 0) {
+          smokeParticles.splice(i, 1);
+          continue;
+        }
+
+        smokeCtx.beginPath();
+        smokeCtx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        smokeCtx.fillStyle = `rgba(242, 232, 222, ${p.alpha * 0.45})`;
+        smokeCtx.fill();
+      }
+
+      requestAnimationFrame(renderSmokeLoop);
+    }
+
+    // -------------------------------------------------------------------------
+    // 5. COUNTDOWN: WEDNESDAY, OCTOBER 21, 2026, 06:00 AM
+    // -------------------------------------------------------------------------
+    function initCountdownTimer() {
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    }
+
+    function updateCountdown() {
+      const now = new Date();
+      const targetWednesday = new Date(2026, 9, 21, 6, 0, 0); // Oct 21, 2026 06:00:00
+
+      const diff = targetWednesday - now;
+
+      if (diff <= 0) {
+        document.getElementById('countdownTimer').innerHTML = '<span class="text-emerald-400 font-bold">✨ POOJA EDUPPU (WEDNESDAY MORNING) IS HERE! ✨</span>';
+        const lockedEl = document.getElementById('lockedCertCountdown');
+        if (lockedEl) lockedEl.textContent = 'Pooja Eduppu reached! Certificate unlocked.';
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / 1000 / 60) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      document.getElementById('cdDays').textContent = String(days).padStart(2, '0') + 'd';
+      document.getElementById('cdHours').textContent = String(hours).padStart(2, '0') + 'h';
+      document.getElementById('cdMins').textContent = String(minutes).padStart(2, '0') + 'm';
+      document.getElementById('cdSecs').textContent = String(seconds).padStart(2, '0') + 's';
+
+      const lockedEl = document.getElementById('lockedCertCountdown');
+      if (lockedEl) {
+        lockedEl.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+      }
+    }
+
+    // -------------------------------------------------------------------------
+    // 6. STREAMLINED SURRENDER FORM (NIGHT LEGEND REMOVED)
+    // -------------------------------------------------------------------------
+    function fillDevotee(name) {
+      document.getElementById('devoteeName').value = name;
+    }
+
+    function fillTitle(title) {
+      document.getElementById('resourceTitle').value = title;
+    }
+
+    function handlePDFSelected(e) {
+      const file = e.target.files && e.target.files[0];
+      if (!file) return;
+
+      const sizeStr = file.size > 1024 * 1024 
+        ? (file.size / (1024 * 1024)).toFixed(1) + ' MB' 
+        : (file.size / 1024).toFixed(0) + ' KB';
+
+      selectedUploadedPDF = {
+        name: file.name,
+        size: sizeStr
+      };
+
+      const titleInput = document.getElementById('resourceTitle');
+      if (!titleInput.value) {
+        titleInput.value = file.name;
+      }
+
+      document.getElementById('pdfUploadPrompt').classList.add('hidden');
+      const badge = document.getElementById('pdfSelectedBadge');
+      badge.classList.remove('hidden');
+      document.getElementById('pdfSelectedName').textContent = file.name;
+      document.getElementById('pdfSelectedSize').textContent = `${sizeStr} • Ready to Surrender`;
+    }
+
+    function clearPDFSelection(e) {
+      if (e) e.stopPropagation();
+      selectedUploadedPDF = null;
+      document.getElementById('pdfFileInput').value = '';
+      document.getElementById('pdfUploadPrompt').classList.remove('hidden');
+      document.getElementById('pdfSelectedBadge').classList.add('hidden');
+    }
+
+    function handleSurrenderSubmit(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('devoteeName').value.trim();
+      const title = document.getElementById('resourceTitle').value.trim();
+      const prayer = document.getElementById('devoteePrayer').value.trim();
+
+      if (!name || (!title && !selectedUploadedPDF)) {
+        showBlankNotice();
+        return;
+      }
+
+      const finalTitle = title || (selectedUploadedPDF ? selectedUploadedPDF.name : 'Study Notes');
+      const isPDF = !!selectedUploadedPDF || finalTitle.toLowerCase().endsWith('.pdf');
+
+      const newItem = {
+        id: 'item_' + Date.now(),
+        devotee: name,
+        type: isPDF ? 'pdf' : (finalTitle.toLowerCase().includes('tab') ? 'tabs' : 'youtube'),
+        title: finalTitle,
+        fileSize: selectedUploadedPDF ? selectedUploadedPDF.size : '',
+        prayer: prayer || 'O Devi, please grant 100% GPA without opening books!',
+        timestamp: 'Oct 18 (Sunday Evening)',
+        blessed: false,
+        isSample: false // User submitted item
+      };
+
+      appState.items.unshift(newItem);
+      saveState();
+
+      spawnFallingPetals(35);
+      spawnConfettiPetals(40);
+
+      renderDevoteeShelf();
+
+      document.getElementById('surrenderForm').reset();
+      clearPDFSelection();
+
+      document.getElementById('devoteeShelfSection').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function getMaterialIcon(type) {
+      switch (type) {
+        case 'pdf': return '📄';
+        case 'youtube': return '📺';
+        case 'tabs': return '🌐';
+        default: return '📜';
+      }
+    }
+
+    function escapeHTML(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    function renderDevoteeShelf() {
+      const container = document.getElementById('itemsGrid');
+      const emptyState = document.getElementById('emptyShelfState');
+      const totalStat = document.getElementById('totalItemsStat');
+
+      if (!container) return;
+
+      totalStat.textContent = appState.items.length;
+
+      if (!appState.items || appState.items.length === 0) {
+        container.innerHTML = '';
+        emptyState.classList.remove('hidden');
+        return;
+      }
+
+      emptyState.classList.add('hidden');
+
+      container.innerHTML = appState.items.map(item => {
+        const icon = getMaterialIcon(item.type);
+        const isBlessed = item.blessed;
+        const safeId = escapeHTML(item.id);
+        const safeTitle = escapeHTML(item.title);
+        const safeFileSize = escapeHTML(item.fileSize);
+        const safePrayer = escapeHTML(item.prayer);
+        const safeDevotee = escapeHTML(item.devotee);
+        const safeTimestamp = escapeHTML(item.timestamp);
+
+        return `
+          <div onclick="handleItemClick('${safeId}')" class="group relative rounded-2xl bg-gradient-to-b from-[#2a0818] to-[#18050e] border ${isBlessed ? 'border-amber-400 shadow-amber-400/20' : 'border-amber-500/30 hover:border-rose-500/70'} p-4 sm:p-5 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 active:scale-95 cursor-pointer select-none overflow-hidden">
+            
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-2 chandan-mark rounded-b-md shadow-sm"></div>
+
+            <div class="absolute top-2 right-2 flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-full ${isBlessed ? 'bg-amber-400/20 text-amber-300 border border-amber-400/40' : 'bg-rose-500/20 text-rose-300 border border-rose-500/40'}">
+              <span>${isBlessed ? '✨ CONSECRATED' : '🔒 LOCKED (UNTIL WED)'}</span>
+            </div>
+
+            <div class="pt-2 flex items-start gap-3">
+              <div class="w-10 h-10 rounded-xl bg-amber-950/70 border border-amber-500/30 flex items-center justify-center text-xl flex-shrink-0 group-hover:scale-110 transition-transform">
+                ${icon}
+              </div>
+              <div class="overflow-hidden">
+                <h4 class="text-sm font-semibold text-amber-100 group-hover:text-amber-200 line-clamp-2 leading-snug">
+                  ${safeTitle}
+                </h4>
+                ${safeFileSize ? `<span class="inline-block mt-1 text-[10px] font-mono text-amber-400/90 bg-amber-950/80 px-1.5 py-0.2 rounded border border-amber-500/30">📎 ${safeFileSize} PDF</span>` : ''}
+              </div>
+            </div>
+
+            <div class="mt-3 p-2 rounded-xl bg-black/40 border border-amber-500/15 text-[11px] text-amber-200/80 italic line-clamp-2">
+              "${safePrayer}"
+            </div>
+
+            <div class="mt-3 pt-2 border-t border-amber-500/15 flex items-center justify-between text-[11px] text-amber-400/60">
+              <span class="flex items-center gap-1 font-medium text-amber-300">
+                <i data-lucide="user-check" class="w-3 h-3"></i> ${safeDevotee}
+              </span>
+              <span>${safeTimestamp}</span>
+            </div>
+
+            <div class="absolute inset-0 bg-gradient-to-t ${isBlessed ? 'from-amber-950/90 via-amber-900/40' : 'from-rose-950/90 via-rose-900/40'} to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-end pb-3 text-center px-2 pointer-events-none">
+              <span class="text-xs font-bold ${isBlessed ? 'text-amber-200' : 'text-rose-200'}">
+                ${isBlessed ? '✨ Study Material Blessed (+100 Brainpower)' : '⚠️ Anti-Study Lock Active! Do Not Touch!'}
+              </span>
+            </div>
+
+          </div>
+        `;
+      }).join('');
+
+      lucide.createIcons();
+    }
+
+    // -------------------------------------------------------------------------
+    // 7. ANTI-STUDY TRAP
+    // -------------------------------------------------------------------------
+    function handleItemClick(itemId) {
+      const item = appState.items.find(i => i.id === itemId);
+      if (!item) return;
+
+      if (item.blessed) {
+        alert(`🌟 Devi's Kataksham is with you!\n\nMaterial: "${item.title}"\nDevotee: ${item.devotee}\n\nStatus: Blessed on Wednesday morning (+100 Brainpower)! You may now study peacefully.`);
+        return;
+      }
+
+      triggerAntiStudyTrap();
+    }
+
+    function triggerAntiStudyTrap() {
+      playMahaPaapamWarningAudio();
+
+      document.body.classList.add('screen-shaking', 'warning-flash');
+      setTimeout(() => {
+        document.body.classList.remove('screen-shaking', 'warning-flash');
+      }, 500);
+
+      const modal = document.getElementById('antiStudyModal');
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+        modal.classList.remove('opacity-0');
+        modal.querySelector('div').classList.remove('scale-95');
+      }, 20);
+    }
+
+    function closeAntiStudyModal() {
+      const modal = document.getElementById('antiStudyModal');
+      modal.classList.add('opacity-0');
+      modal.querySelector('div').classList.add('scale-95');
+      setTimeout(() => {
+        modal.classList.add('hidden');
+      }, 250);
+    }
+
+    function clearAllItemsConfirm() {
+      if (confirm('Clear all surrendered study materials from the altar?')) {
+        appState.items = [];
+        saveState();
+        renderDevoteeShelf();
+      }
+    }
+
+    // -------------------------------------------------------------------------
+    // 8. WEDNESDAY EXEMPTION CERTIFICATE - LOCKED UNTIL WEDNESDAY & BLANK CHECK
+    // -------------------------------------------------------------------------
+    function showBlankNotice() {
+      const toast = document.getElementById('blankNoticeToast');
+      if (toast) {
+        toast.classList.remove('hidden');
+        setTimeout(() => toast.classList.remove('opacity-0'), 10);
+        setTimeout(() => {
+          toast.classList.add('opacity-0');
+          setTimeout(() => toast.classList.add('hidden'), 300);
+        }, 3200);
+      }
+
+      const nameInput = document.getElementById('devoteeName');
+      if (nameInput) {
+        nameInput.focus();
+        nameInput.classList.add('ring-2', 'ring-rose-500');
+        setTimeout(() => nameInput.classList.remove('ring-2', 'ring-rose-500'), 2000);
+      }
+      document.getElementById('surrenderFormSection').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function openCertLockedModal() {
+      const modal = document.getElementById('certLockedModal');
+      if (!modal) return;
+      updateCountdown();
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+        modal.classList.remove('opacity-0');
+        modal.querySelector('div').classList.remove('scale-95');
+      }, 20);
+    }
+
+    function closeCertLockedModal() {
+      const modal = document.getElementById('certLockedModal');
+      if (!modal) return;
+      modal.classList.add('opacity-0');
+      modal.querySelector('div').classList.add('scale-95');
+      setTimeout(() => {
+        modal.classList.add('hidden');
+      }, 250);
+    }
+
+    function unlockCertificateForPreview() {
+      closeCertLockedModal();
+      forceUnlockCertificate = true;
+      openCertificateModal(true);
+    }
+
+    function openCertificateModal(bypassDateCheck = false) {
+      const nameInput = document.getElementById('devoteeName');
+      const enteredName = nameInput ? nameInput.value.trim() : '';
+
+      // Check if user has any submitted item
+      const hasUserItem = appState.items && appState.items.some(i => i.devotee);
+
+      // RULE 1: DON'T GENERATE WHEN TEXT BOX IS BLANK AND NO USER ITEM EXISTS
+      if (!enteredName && !hasUserItem) {
+        showBlankNotice();
+        return;
+      }
+
+      // RULE 2: DON'T GENERATE UNTIL WEDNESDAY MORNING (OCT 21, 06:00:00 AM)
+      const now = new Date();
+      const targetWednesday = new Date(2026, 9, 21, 6, 0, 0);
+
+      if (now < targetWednesday && !bypassDateCheck && !forceUnlockCertificate) {
+        openCertLockedModal();
+        return;
+      }
+
+      // If checks pass, generate and open modal
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(() => {
+          generateCertificateCanvas();
+        });
+      } else {
+        generateCertificateCanvas();
+      }
+
+      const modal = document.getElementById('certificateModal');
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+        modal.classList.remove('opacity-0');
+      }, 20);
+    }
+
+    function closeCertificateModal() {
+      const modal = document.getElementById('certificateModal');
+      modal.classList.add('opacity-0');
+      setTimeout(() => {
+        modal.classList.add('hidden');
+      }, 250);
+    }
+
+    function generateFreshCertificate() {
+      generateCertificateCanvas();
+    }
+
+    function generateCertificateCanvas() {
+      const canvas = document.getElementById('certCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+
+      const W = canvas.width;  // 1200
+      const H = canvas.height; // 800
+
+      const nameInput = document.getElementById('devoteeName');
+      const enteredName = nameInput ? nameInput.value.trim() : '';
+      const enteredTitle = document.getElementById('resourceTitle')?.value.trim();
+
+      // Find user-submitted item first, or use current form input
+      const userItem = appState.items && appState.items.find(i => i.devotee);
+      const latestItem = userItem || (enteredName ? {
+        devotee: enteredName,
+        title: enteredTitle || (selectedUploadedPDF ? selectedUploadedPDF.name : 'Digital Study Notes & Open Tabs')
+      } : null);
+
+      // Guard: Do not generate if blank
+      if (!latestItem || !latestItem.devotee) {
+        showBlankNotice();
+        return;
+      }
+
+      // 1. Festive Background
+      const bgGrad = ctx.createRadialGradient(W / 2, H / 2, 50, W / 2, H / 2, 700);
+      bgGrad.addColorStop(0, '#2b0716');
+      bgGrad.addColorStop(0.7, '#1a040e');
+      bgGrad.addColorStop(1, '#0e0207');
+      ctx.fillStyle = bgGrad;
+      ctx.fillRect(0, 0, W, H);
+
+      // 2. Kerala Kasavu Gold Border
+      ctx.strokeStyle = '#d97706';
+      ctx.lineWidth = 14;
+      ctx.strokeRect(24, 24, W - 48, H - 48);
+
+      ctx.strokeStyle = '#fbbf24';
+      ctx.lineWidth = 4;
+      ctx.strokeRect(36, 36, W - 72, H - 72);
+
+      drawCornerMandala(ctx, 40, 40);
+      drawCornerMandala(ctx, W - 40, 40);
+      drawCornerMandala(ctx, 40, H - 40);
+      drawCornerMandala(ctx, W - 40, H - 40);
+
+      // 3. Official Header
+      ctx.textAlign = 'center';
+      ctx.fillStyle = '#fef08a';
+      ctx.font = 'bold 17px "Poppins", sans-serif';
+      ctx.fillText('CYBER SANNIDHANAM • OFFICIAL POOJA VEPPU DEVASWOM BOARD', W / 2, 90);
+
+      ctx.fillStyle = '#ffd700';
+      ctx.font = 'bold 36px "Cinzel", serif';
+      ctx.fillText('CERTIFICATE OF DIGITAL POOJA VEPPU', W / 2, 142);
+
+      ctx.fillStyle = '#fcd34d';
+      ctx.font = '600 15px "Poppins", sans-serif';
+      ctx.fillText('OFFICIAL IMMUNITY DECREE • VALID UNTIL WEDNESDAY MORNING, OCT 21, 2026', W / 2, 178);
+
+      ctx.strokeStyle = '#fbbf24';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(W / 2 - 280, 198);
+      ctx.lineTo(W / 2 + 280, 198);
+      ctx.stroke();
+
+      ctx.fillStyle = '#ffd700';
+      ctx.font = '22px serif';
+      ctx.fillText('🛕 ॐ 🛕', W / 2, 206);
+
+      // Certify text
+      ctx.fillStyle = '#fef3c7';
+      ctx.font = '400 20px "Poppins", sans-serif';
+      ctx.fillText('This is to certify that all modern study materials of devotee:', W / 2, 255);
+
+      // Devotee Name (Real user name, not blank, with adaptive font scaling)
+      ctx.fillStyle = '#ffd700';
+      const devoteeText = (latestItem.devotee || 'BLESSED DEVOTEE').toUpperCase();
+      const nameSize = devoteeText.length > 22 ? 26 : (devoteeText.length > 15 ? 30 : 36);
+      ctx.font = `bold ${nameSize}px "Cinzel", serif`;
+      ctx.fillText(devoteeText, W / 2, 310);
+
+      // Material
+      ctx.fillStyle = '#fef3c7';
+      ctx.font = '400 19px "Poppins", sans-serif';
+      ctx.fillText(`have been officially surrendered at Saraswati Devi's Lotus Feet:`, W / 2, 360);
+
+      ctx.fillStyle = '#f59e0b';
+      let titleDisplay = latestItem.title || 'Digital Study Materials';
+      if (titleDisplay.length > 55) {
+        titleDisplay = titleDisplay.substring(0, 52) + '...';
+      }
+      ctx.font = 'bold 24px "Cinzel", serif';
+      ctx.fillText(`"${titleDisplay}"`, W / 2, 400);
+
+      // Legal Exemption Clause Box
+      const clauseBoxY = 440;
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.45)';
+      ctx.fillRect(W / 2 - 470, clauseBoxY, 940, 160);
+      ctx.strokeStyle = 'rgba(251, 191, 36, 0.4)';
+      ctx.lineWidth = 1.5;
+      ctx.strokeRect(W / 2 - 470, clauseBoxY, 940, 160);
+
+      ctx.fillStyle = '#fbbf24';
+      ctx.font = 'bold 15px "Poppins", sans-serif';
+      ctx.fillText('TERMS OF CELESTIAL POOJA VEPPU EXEMPTION:', W / 2, clauseBoxY + 30);
+
+      ctx.fillStyle = '#fef3c7';
+      ctx.font = '400 15px "Poppins", sans-serif';
+      ctx.fillText('1. Study Break Period: Active from Sunday Evening (Oct 18) until Wednesday Morning (Oct 21).', W / 2, clauseBoxY + 60);
+      ctx.fillText('2. The student is strictly forbidden from opening textbooks, reading PDFs, or revising formulas.', W / 2, clauseBoxY + 88);
+      ctx.fillText('3. Any parent or teacher asking "Why are you not studying?" is committing a spiritual violation.', W / 2, clauseBoxY + 116);
+      ctx.fillText('4. Official Pooja Eduppu (Retrieval of Books) takes place on Wednesday Morning, October 21.', W / 2, clauseBoxY + 144);
+
+      // Signatures
+      const sigY = 690;
+
+      ctx.textAlign = 'left';
+      ctx.fillStyle = '#fef08a';
+      ctx.font = 'italic 19px "Cinzel", serif';
+      ctx.fillText('Chitragupta 🖋️', 120, sigY);
+      ctx.strokeStyle = '#d97706';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(115, sigY + 8);
+      ctx.lineTo(260, sigY + 8);
+      ctx.stroke();
+      ctx.font = '12px "Poppins", sans-serif';
+      ctx.fillStyle = '#fde68a';
+      ctx.fillText('Chief Celestial Registrar', 120, sigY + 28);
+
+      drawOfficialSeal(ctx, W / 2, sigY - 20);
+
+      ctx.textAlign = 'right';
+      ctx.fillStyle = '#ffd700';
+      ctx.font = 'bold 21px "Cinzel", serif';
+      ctx.fillText('Sri Saraswati Devi 🙏', W - 120, sigY);
+      ctx.strokeStyle = '#d97706';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(W - 270, sigY + 8);
+      ctx.lineTo(W - 115, sigY + 8);
+      ctx.stroke();
+      ctx.font = '12px "Poppins", sans-serif';
+      ctx.fillStyle = '#fde68a';
+      ctx.fillText('Presiding Goddess of Knowledge', W - 120, sigY + 28);
+
+      ctx.textAlign = 'center';
+      ctx.font = 'bold 12px "Poppins", sans-serif';
+      ctx.fillStyle = '#fef08a';
+      ctx.fillText(`OFFICIALLY ISSUED ON: WEDNESDAY, OCTOBER 21, 2026 (VIJAYADASHAMI) • HASH: PV-WED-2026-${Date.now().toString(36).toUpperCase()}`, W / 2, H - 42);
+    }
+
+    function drawCornerMandala(ctx, x, y) {
+      ctx.save();
+      ctx.translate(x, y);
+      ctx.fillStyle = '#ffd700';
+      ctx.beginPath();
+      ctx.arc(0, 0, 14, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.strokeStyle = '#92400e';
+      ctx.lineWidth = 2;
+      ctx.stroke();
+      ctx.restore();
+    }
+
+    function drawOfficialSeal(ctx, x, y) {
+      ctx.save();
+      ctx.translate(x, y);
+
+      ctx.fillStyle = '#b45309';
+      ctx.beginPath();
+      ctx.arc(0, 0, 52, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.fillStyle = '#d97706';
+      ctx.beginPath();
+      ctx.arc(0, 0, 46, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.fillStyle = '#991b1b';
+      ctx.beginPath();
+      ctx.arc(0, 0, 38, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.fillStyle = '#fef08a';
+      ctx.font = 'bold 9px "Poppins", sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText('VALIDATED FOR', 0, -12);
+      ctx.font = 'bold 13px "Cinzel", serif';
+      ctx.fillText('WEDNESDAY', 0, 3);
+      ctx.font = 'bold 9px "Poppins", sans-serif';
+      ctx.fillText('OCT 21, 2026', 0, 18);
+
+      ctx.restore();
+    }
+
+    function downloadCertificatePNG() {
+      const canvas = document.getElementById('certCanvas');
+      if (!canvas) return;
+
+      const nameInput = document.getElementById('devoteeName');
+      const enteredName = nameInput ? nameInput.value.trim() : '';
+      const hasUserItem = appState.items && appState.items.some(i => i.devotee);
+
+      if (!enteredName && !hasUserItem) {
+        showBlankNotice();
+        return;
+      }
+
+      try {
+        const dataURL = canvas.toDataURL('image/png');
+        const link = document.createElement('a');
+        link.download = `Official_Pooja_Veppu_Certificate_Wednesday_Oct21.png`;
+        link.href = dataURL;
+        document.body.appendChild(link);
+        link.click();
+        setTimeout(() => {
+          if (link.parentNode) link.parentNode.removeChild(link);
+        }, 150);
+      } catch (err) {
+        console.error('Canvas export error:', err);
+        window.open(canvas.toDataURL('image/png'), '_blank');
+      }
+
+      spawnConfettiPetals(50);
+    }
+
+    // -------------------------------------------------------------------------
+    // 9. VIDYARAMBHAM RICE TRAY
+    // -------------------------------------------------------------------------
+    let riceCanvas, riceCtx;
+    let isTracingRice = false;
+
+    function openVidyarambhamModal() {
+      const modal = document.getElementById('vidyarambhamModal');
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+        modal.classList.remove('opacity-0');
+        initRiceCanvas();
+      }, 20);
+    }
+
+    function closeVidyarambhamModal() {
+      const modal = document.getElementById('vidyarambhamModal');
+      modal.classList.add('opacity-0');
+      setTimeout(() => {
+        modal.classList.add('hidden');
+      }, 250);
+    }
+
+    function initRiceCanvas() {
+      riceCanvas = document.getElementById('riceCanvas');
+      if (!riceCanvas) return;
+      riceCtx = riceCanvas.getContext('2d');
+
+      riceCanvas.removeEventListener('mousedown', startRiceDraw);
+      riceCanvas.removeEventListener('mousemove', traceRiceDraw);
+      window.removeEventListener('mouseup', stopRiceDraw);
+
+      riceCanvas.addEventListener('mousedown', startRiceDraw);
+      riceCanvas.addEventListener('mousemove', traceRiceDraw);
+      window.addEventListener('mouseup', stopRiceDraw);
+
+      riceCanvas.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        const touch = e.touches[0];
+        const rect = riceCanvas.getBoundingClientRect();
+        const scaleX = riceCanvas.width / rect.width;
+        const scaleY = riceCanvas.height / rect.height;
+        drawRiceDisplacement((touch.clientX - rect.left) * scaleX, (touch.clientY - rect.top) * scaleY);
+        isTracingRice = true;
+      }, { passive: false });
+
+      riceCanvas.addEventListener('touchmove', (e) => {
+        e.preventDefault();
+        if (!isTracingRice) return;
+        const touch = e.touches[0];
+        const rect = riceCanvas.getBoundingClientRect();
+        const scaleX = riceCanvas.width / rect.width;
+        const scaleY = riceCanvas.height / rect.height;
+        drawRiceDisplacement((touch.clientX - rect.left) * scaleX, (touch.clientY - rect.top) * scaleY);
+      }, { passive: false });
+
+      window.addEventListener('touchend', () => { isTracingRice = false; });
+
+      resetRiceCanvas();
+    }
+
+    function resetRiceCanvas() {
+      if (!riceCtx) return;
+      const W = riceCanvas.width;
+      const H = riceCanvas.height;
+
+      riceCtx.clearRect(0, 0, W, H);
+
+      const riceBaseGrad = riceCtx.createRadialGradient(W / 2, H / 2, 40, W / 2, H / 2, W / 2);
+      riceBaseGrad.addColorStop(0, '#fef08a');
+      riceBaseGrad.addColorStop(0.7, '#fde047');
+      riceBaseGrad.addColorStop(1, '#eab308');
+      riceCtx.fillStyle = riceBaseGrad;
+      riceCtx.fillRect(0, 0, W, H);
+
+      for (let i = 0; i < 2600; i++) {
+        const x = Math.random() * W;
+        const y = Math.random() * H;
+        const grainAngle = Math.random() * Math.PI;
+
+        riceCtx.save();
+        riceCtx.translate(x, y);
+        riceCtx.rotate(grainAngle);
+
+        riceCtx.fillStyle = Math.random() > 0.4 ? '#ffffff' : '#fef9c3';
+        riceCtx.beginPath();
+        riceCtx.ellipse(0, 0, 1.8, 5.5, 0, 0, Math.PI * 2);
+        riceCtx.fill();
+
+        riceCtx.strokeStyle = 'rgba(202, 138, 4, 0.4)';
+        riceCtx.lineWidth = 0.5;
+        riceCtx.stroke();
+
+        riceCtx.restore();
+      }
+    }
+
+    function setRiceGuide(mode) {
+      const large = document.getElementById('guideTextLarge');
+      const sub = document.getElementById('guideTextSub');
+      const bMal = document.getElementById('guideMalayalamBtn');
+      const bOm = document.getElementById('guideOmBtn');
+      const bFree = document.getElementById('guideFreeBtn');
+
+      [bMal, bOm, bFree].forEach(b => {
+        b.className = 'px-2 py-0.5 rounded bg-amber-950/80 text-amber-300 border border-amber-600/30 hover:bg-amber-900/60';
+      });
+
+      if (mode === 'malayalam') {
+        large.textContent = 'ഹരി ശ്രീ ഗണപതയേ നമഃ';
+        large.className = 'text-amber-900/40 text-4xl sm:text-5xl font-malayalam font-bold tracking-wider';
+        sub.textContent = 'HARI SRI GANAPATAYE NAMAH';
+        sub.classList.remove('hidden');
+        bMal.className = 'px-2 py-0.5 rounded bg-amber-600 text-amber-950 font-bold border border-amber-400';
+      } else if (mode === 'om') {
+        large.textContent = 'ॐ';
+        large.className = 'text-amber-900/40 text-7xl sm:text-8xl font-serif font-bold';
+        sub.textContent = 'AUM - THE PRIMORDIAL SOUND';
+        sub.classList.remove('hidden');
+        bOm.className = 'px-2 py-0.5 rounded bg-amber-600 text-amber-950 font-bold border border-amber-400';
+      } else {
+        large.textContent = '';
+        sub.classList.add('hidden');
+        bFree.className = 'px-2 py-0.5 rounded bg-amber-600 text-amber-950 font-bold border border-amber-400';
+      }
+    }
+
+    function startRiceDraw(e) {
+      isTracingRice = true;
+      const rect = riceCanvas.getBoundingClientRect();
+      const scaleX = riceCanvas.width / rect.width;
+      const scaleY = riceCanvas.height / rect.height;
+      drawRiceDisplacement((e.clientX - rect.left) * scaleX, (e.clientY - rect.top) * scaleY);
+    }
+
+    function traceRiceDraw(e) {
+      if (!isTracingRice) return;
+      const rect = riceCanvas.getBoundingClientRect();
+      const scaleX = riceCanvas.width / rect.width;
+      const scaleY = riceCanvas.height / rect.height;
+      drawRiceDisplacement((e.clientX - rect.left) * scaleX, (e.clientY - rect.top) * scaleY);
+    }
+
+    function stopRiceDraw() {
+      isTracingRice = false;
+    }
+
+    function drawRiceDisplacement(x, y) {
+      if (!riceCtx) return;
+
+      riceCtx.save();
+      riceCtx.globalCompositeOperation = 'destination-out';
+      riceCtx.beginPath();
+      riceCtx.arc(x, y, 16, 0, Math.PI * 2);
+      riceCtx.fill();
+      riceCtx.restore();
+
+      playRiceGrainAudio();
+    }
+
+    function completeVidyarambhamBlessing() {
+      playConchShankhAudio();
+
+      appState.items.forEach(i => i.blessed = true);
+      saveState();
+      renderDevoteeShelf();
+
+      spawnFallingPetals(50);
+      spawnConfettiPetals(70);
+
+      closeVidyarambhamModal();
+
+      setTimeout(() => {
+        alert('🌾 VIDYARAMBHAM COMPLETE! 🌾\n\nYour study materials are officially consecrated by Goddess Saraswati!\n\n✨ Brainpower: +100\n✨ Exam Confidence: 100%\n\nYou can now open and study your notes peacefully!');
+      }, 400);
+    }
+
+    // -------------------------------------------------------------------------
+    // 10. INITIALIZATION
+    // -------------------------------------------------------------------------
+    window.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+      renderDevoteeShelf();
+      initSmokeSimulation();
+      initPetalsCanvas();
+      initCountdownTimer();
+
+      applyFlameState('flameLeft', appState.altar.flameLeft);
+      applyFlameState('flameRight', appState.altar.flameRight);
+      const rings = appState.altar.bellRings || 0;
+      if (document.getElementById('bellCount')) document.getElementById('bellCount').textContent = rings;
+      if (document.getElementById('mobileBellCount')) document.getElementById('mobileBellCount').textContent = rings;
+      document.getElementById('pushpanjaliCount').textContent = appState.altar.pushpanjaliOffered || 0;
+    });
+  </script>
+</body>
+</html>
